@@ -1,44 +1,983 @@
-13:48:40:253  INFO 33836 --- [main] com.hmall.trade.TradeApplication         : Starting TradeApplication using Java 17.0.12 on lyk with PID 33836 (C:\baidunetdiskdownload\黑马商城\day03-微服务01\资料\hmall\trade-service\target\classes started by liuyi in C:\baidunetdiskdownload\黑马商城\day03-微服务01\资料\hmall)
-13:48:40:258 DEBUG 33836 --- [main] com.hmall.trade.TradeApplication         : Running with Spring Boot v2.7.12, Spring v5.3.27
-13:48:40:258  INFO 33836 --- [main] com.hmall.trade.TradeApplication         : The following 1 profile is active: "dev"
-13:48:41:009  INFO 33836 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-13:48:41:013  INFO 33836 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-13:48:41:036  INFO 33836 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
-13:48:41:247  INFO 33836 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=e3de55e3-88c0-3ae7-b5db-7d1c451211e6
-13:48:41:732  INFO 33836 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8086 (http)
-13:48:41:743  INFO 33836 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-13:48:41:744  INFO 33836 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.75]
-13:48:41:922  INFO 33836 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-13:48:41:922  INFO 33836 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1610 ms
-13:48:42:155  INFO 33836 --- [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'item-service' URL not provided. Will try picking an instance via load-balancing.
-13:48:42:571  INFO 33836 --- [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'cart-service' URL not provided. Will try picking an instance via load-balancing.
-13:48:44:470  INFO 33836 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
-13:48:44:505  INFO 33836 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
-13:48:46:407  INFO 33836 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
-13:48:46:643  INFO 33836 --- [main] com.alibaba.nacos.common.remote.client   : [RpcClientFactory] create a new rpc client of d1348cef-d9d7-4aab-aae8-e8e7f92b35cb
-13:48:46:729  INFO 33836 --- [main] org.reflections.Reflections              : Reflections took 37 ms to scan 1 urls, producing 3 keys and 6 values 
-13:48:46:757  INFO 33836 --- [main] org.reflections.Reflections              : Reflections took 7 ms to scan 1 urls, producing 4 keys and 9 values 
-13:48:46:766  INFO 33836 --- [main] org.reflections.Reflections              : Reflections took 7 ms to scan 1 urls, producing 3 keys and 10 values 
-13:48:46:769  WARN 33836 --- [main] org.reflections.Reflections              : given scan urls are empty. set urls in the configuration
-13:48:46:775  INFO 33836 --- [main] org.reflections.Reflections              : Reflections took 6 ms to scan 1 urls, producing 1 keys and 5 values 
-13:48:46:784  INFO 33836 --- [main] org.reflections.Reflections              : Reflections took 6 ms to scan 1 urls, producing 1 keys and 7 values 
-13:48:46:794  INFO 33836 --- [main] org.reflections.Reflections              : Reflections took 7 ms to scan 1 urls, producing 2 keys and 8 values 
-13:48:46:798  WARN 33836 --- [main] org.reflections.Reflections              : given scan urls are empty. set urls in the configuration
-13:48:46:799  INFO 33836 --- [main] com.alibaba.nacos.common.remote.client   : [d1348cef-d9d7-4aab-aae8-e8e7f92b35cb] RpcClient init label, labels = {module=naming, source=sdk}
-13:48:46:801  INFO 33836 --- [main] com.alibaba.nacos.common.remote.client   : [d1348cef-d9d7-4aab-aae8-e8e7f92b35cb] RpcClient init, ServerListFactory = com.alibaba.nacos.client.naming.core.ServerListManager
-13:48:46:801  INFO 33836 --- [main] com.alibaba.nacos.common.remote.client   : [d1348cef-d9d7-4aab-aae8-e8e7f92b35cb] Registry connection listener to current client:com.alibaba.nacos.client.naming.remote.gprc.redo.NamingGrpcRedoService
-13:48:46:802  INFO 33836 --- [main] com.alibaba.nacos.common.remote.client   : [d1348cef-d9d7-4aab-aae8-e8e7f92b35cb] Register server push request handler:com.alibaba.nacos.client.naming.remote.gprc.NamingPushRequestHandler
-13:48:46:804  INFO 33836 --- [main] com.alibaba.nacos.common.remote.client   : [d1348cef-d9d7-4aab-aae8-e8e7f92b35cb] Try to connect to server on start up, server: {serverIp = 'localhost', server main port = 8848}
-13:48:48:168  INFO 33836 --- [main] com.alibaba.nacos.common.remote.client   : [d1348cef-d9d7-4aab-aae8-e8e7f92b35cb] Success to connect to server [localhost:8848] on start up, connectionId = 1754891327972_172.17.0.1_37354
-13:48:48:168  INFO 33836 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [d1348cef-d9d7-4aab-aae8-e8e7f92b35cb] Notify connected event to listeners.
-13:48:48:168  INFO 33836 --- [main] com.alibaba.nacos.common.remote.client   : [d1348cef-d9d7-4aab-aae8-e8e7f92b35cb] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
-13:48:48:169  INFO 33836 --- [main] com.alibaba.nacos.common.remote.client   : [d1348cef-d9d7-4aab-aae8-e8e7f92b35cb] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$1133/0x000001ff01881ad0
-13:48:48:213  INFO 33836 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8086 (http) with context path ''
-13:48:48:223  INFO 33836 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP trade-service 192.168.138.1:8086 register finished
-13:48:48:716  INFO 33836 --- [nacos-grpc-client-executor-9] com.alibaba.nacos.common.remote.client   : [d1348cef-d9d7-4aab-aae8-e8e7f92b35cb] Receive server push request, request = NotifySubscriberRequest, requestId = 2
-13:48:48:718  INFO 33836 --- [nacos-grpc-client-executor-9] com.alibaba.nacos.common.remote.client   : [d1348cef-d9d7-4aab-aae8-e8e7f92b35cb] Ack server push request, request = NotifySubscriberRequest, requestId = 2
-13:48:49:634  INFO 33836 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
-13:48:49:634  INFO 33836 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
-13:48:49:637  INFO 33836 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-13:48:49:653  INFO 33836 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-13:48:49:719  INFO 33836 --- [main] com.hmall.trade.TradeApplication         : Started TradeApplication in 11.384 seconds (JVM running for 12.03)
+14:28:45:961  INFO 26920 --- [main] com.alibaba.nacos.common.remote.client   : [RpcClientFactory] create a new rpc client of 5794bdb2-8da9-4b4f-a8e1-77abd6d342d3_config-0
+14:28:46:000  INFO 26920 --- [main] org.reflections.Reflections              : Reflections took 19 ms to scan 1 urls, producing 3 keys and 6 values 
+14:28:46:021  INFO 26920 --- [main] org.reflections.Reflections              : Reflections took 7 ms to scan 1 urls, producing 4 keys and 9 values 
+14:28:46:029  INFO 26920 --- [main] org.reflections.Reflections              : Reflections took 5 ms to scan 1 urls, producing 3 keys and 10 values 
+14:28:46:032  WARN 26920 --- [main] org.reflections.Reflections              : given scan urls are empty. set urls in the configuration
+14:28:46:039  INFO 26920 --- [main] org.reflections.Reflections              : Reflections took 5 ms to scan 1 urls, producing 1 keys and 5 values 
+14:28:46:046  INFO 26920 --- [main] org.reflections.Reflections              : Reflections took 5 ms to scan 1 urls, producing 1 keys and 7 values 
+14:28:46:057  INFO 26920 --- [main] org.reflections.Reflections              : Reflections took 8 ms to scan 1 urls, producing 2 keys and 8 values 
+14:28:46:060  WARN 26920 --- [main] org.reflections.Reflections              : given scan urls are empty. set urls in the configuration
+14:28:46:061  INFO 26920 --- [main] com.alibaba.nacos.common.remote.client   : [5794bdb2-8da9-4b4f-a8e1-77abd6d342d3_config-0] RpcClient init label, labels = {module=config, Vipserver-Tag=null, source=sdk, Amory-Tag=null, Location-Tag=null, taskId=0, AppName=unknown}
+14:28:46:061  INFO 26920 --- [main] com.alibaba.nacos.common.remote.client   : [5794bdb2-8da9-4b4f-a8e1-77abd6d342d3_config-0] Register server push request handler:com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$$Lambda$463/0x00000008003ff040
+14:28:46:061  INFO 26920 --- [main] com.alibaba.nacos.common.remote.client   : [5794bdb2-8da9-4b4f-a8e1-77abd6d342d3_config-0] Register server push request handler:com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$$Lambda$464/0x00000008003ff440
+14:28:46:062  INFO 26920 --- [main] com.alibaba.nacos.common.remote.client   : [5794bdb2-8da9-4b4f-a8e1-77abd6d342d3_config-0] Registry connection listener to current client:com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$1
+14:28:46:063  INFO 26920 --- [main] com.alibaba.nacos.common.remote.client   : [5794bdb2-8da9-4b4f-a8e1-77abd6d342d3_config-0] RpcClient init, ServerListFactory = com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$2
+14:28:46:071  INFO 26920 --- [main] com.alibaba.nacos.common.remote.client   : [5794bdb2-8da9-4b4f-a8e1-77abd6d342d3_config-0] Try to connect to server on start up, server: {serverIp = '127.0.0.1', server main port = 8848}
+14:28:49:933  INFO 26920 --- [main] com.alibaba.nacos.common.remote.client   : [5794bdb2-8da9-4b4f-a8e1-77abd6d342d3_config-0] Success to connect to server [127.0.0.1:8848] on start up, connectionId = 1755239329738_172.17.0.1_34468
+14:28:49:934  INFO 26920 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [5794bdb2-8da9-4b4f-a8e1-77abd6d342d3_config-0] Notify connected event to listeners.
+14:28:49:935  INFO 26920 --- [main] com.alibaba.nacos.common.remote.client   : [5794bdb2-8da9-4b4f-a8e1-77abd6d342d3_config-0] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
+14:28:49:936  INFO 26920 --- [main] com.alibaba.nacos.common.remote.client   : [5794bdb2-8da9-4b4f-a8e1-77abd6d342d3_config-0] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$478/0x0000000800500440
+14:28:49:985  WARN 26920 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[trade-service] & group[DEFAULT_GROUP]
+14:28:49:993  WARN 26920 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[trade-service.properties] & group[DEFAULT_GROUP]
+14:28:50:000  WARN 26920 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[trade-service-dev.properties] & group[DEFAULT_GROUP]
+14:28:50:001  INFO 26920 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-trade-service-dev.properties,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-trade-service.properties,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-trade-service,DEFAULT_GROUP'}]
+14:28:50:013  INFO 26920 --- [main] com.hmall.trade.TradeApplication         : The following 1 profile is active: "dev"
+14:28:50:631  INFO 26920 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+14:28:50:633  INFO 26920 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+14:28:50:655  INFO 26920 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
+14:28:50:830  INFO 26920 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=1be9ac70-fba2-3251-b291-1492dda12822
+14:28:50:886  INFO 26920 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'io.seata.spring.boot.autoconfigure.SeataCoreAutoConfiguration' of type [io.seata.spring.boot.autoconfigure.SeataCoreAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+14:28:50:886  INFO 26920 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'springApplicationContextProvider' of type [io.seata.spring.boot.autoconfigure.provider.SpringApplicationContextProvider] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+14:28:50:886  INFO 26920 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'io.seata.spring.boot.autoconfigure.SeataAutoConfiguration' of type [io.seata.spring.boot.autoconfigure.SeataAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+14:28:50:917  INFO 26920 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'failureHandler' of type [io.seata.tm.api.DefaultFailureHandlerImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+14:28:50:920  INFO 26920 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration' of type [org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+14:28:50:920  INFO 26920 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+14:28:50:921  INFO 26920 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerClientsDefaultsMappingsProvider' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration$$Lambda$593/0x000000080066d440] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+14:28:50:921  INFO 26920 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'defaultsBindHandlerAdvisor' of type [org.springframework.cloud.commons.config.DefaultsBindHandlerAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+14:28:50:923  INFO 26920 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'springCloudAlibabaConfiguration' of type [io.seata.spring.boot.autoconfigure.properties.SpringCloudAlibabaConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+14:28:50:924  INFO 26920 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'seataProperties' of type [io.seata.spring.boot.autoconfigure.properties.SeataProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+14:28:50:927  INFO 26920 --- [main] i.s.s.b.a.SeataAutoConfiguration         : Automatically configure Seata
+14:28:50:985  INFO 26920 --- [main] io.seata.config.ConfigurationFactory     : load Configuration from :Spring Configuration
+14:28:50:992  INFO 26920 --- [main] io.seata.config.ConfigurationFactory     : load Configuration from :Spring Configuration
+14:28:51:045  INFO 26920 --- [main] i.s.s.a.GlobalTransactionScanner         : Initializing Global Transaction Clients ... 
+14:28:51:111  INFO 26920 --- [main] i.s.core.rpc.netty.NettyClientBootstrap  : NettyClientBootstrap has started
+14:28:51:129 ERROR 26920 --- [main] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:28:51:129  INFO 26920 --- [main] i.s.s.a.GlobalTransactionScanner         : Transaction Manager Client is initialized. applicationId[trade-service] txServiceGroup[default_tx_group]
+14:28:51:136  INFO 26920 --- [main] io.seata.rm.datasource.AsyncWorker       : Async Commit Buffer Limit: 10000
+14:28:51:137  INFO 26920 --- [main] i.s.rm.datasource.xa.ResourceManagerXA   : ResourceManagerXA init ...
+14:28:51:144  INFO 26920 --- [main] i.s.core.rpc.netty.NettyClientBootstrap  : NettyClientBootstrap has started
+14:28:51:144  INFO 26920 --- [main] i.s.s.a.GlobalTransactionScanner         : Resource Manager is initialized. applicationId[trade-service] txServiceGroup[default_tx_group]
+14:28:51:144  INFO 26920 --- [main] i.s.s.a.GlobalTransactionScanner         : Global Transaction Clients are initialized. 
+14:28:51:146  INFO 26920 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'io.seata.spring.boot.autoconfigure.SeataDataSourceAutoConfiguration' of type [io.seata.spring.boot.autoconfigure.SeataDataSourceAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+14:28:51:213  INFO 26920 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.alibaba.cloud.seata.feign.SeataFeignClientAutoConfiguration$FeignBeanPostProcessorConfiguration' of type [com.alibaba.cloud.seata.feign.SeataFeignClientAutoConfiguration$FeignBeanPostProcessorConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+14:28:51:214  INFO 26920 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'seataFeignObjectWrapper' of type [com.alibaba.cloud.seata.feign.SeataFeignObjectWrapper] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+14:28:51:425  INFO 26920 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8086 (http)
+14:28:51:436  INFO 26920 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+14:28:51:436  INFO 26920 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.75]
+14:28:51:641  INFO 26920 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+14:28:51:641  INFO 26920 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1618 ms
+14:28:51:819  INFO 26920 --- [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'item-service' URL not provided. Will try picking an instance via load-balancing.
+14:28:52:033  INFO 26920 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+14:28:52:985  INFO 26920 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+14:28:53:076 ERROR 26920 --- [main] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:28:54:178  INFO 26920 --- [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'cart-service' URL not provided. Will try picking an instance via load-balancing.
+14:28:57:065  INFO 26920 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+14:28:57:094  INFO 26920 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+14:29:00:324  INFO 26920 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+14:29:00:468  INFO 26920 --- [main] com.alibaba.nacos.common.remote.client   : [RpcClientFactory] create a new rpc client of 5e958763-9437-4039-ada1-02f83e82bf33
+14:29:00:469  INFO 26920 --- [main] com.alibaba.nacos.common.remote.client   : [5e958763-9437-4039-ada1-02f83e82bf33] RpcClient init label, labels = {module=naming, source=sdk}
+14:29:00:471  INFO 26920 --- [main] com.alibaba.nacos.common.remote.client   : [5e958763-9437-4039-ada1-02f83e82bf33] RpcClient init, ServerListFactory = com.alibaba.nacos.client.naming.core.ServerListManager
+14:29:00:471  INFO 26920 --- [main] com.alibaba.nacos.common.remote.client   : [5e958763-9437-4039-ada1-02f83e82bf33] Registry connection listener to current client:com.alibaba.nacos.client.naming.remote.gprc.redo.NamingGrpcRedoService
+14:29:00:471  INFO 26920 --- [main] com.alibaba.nacos.common.remote.client   : [5e958763-9437-4039-ada1-02f83e82bf33] Register server push request handler:com.alibaba.nacos.client.naming.remote.gprc.NamingPushRequestHandler
+14:29:00:471  INFO 26920 --- [main] com.alibaba.nacos.common.remote.client   : [5e958763-9437-4039-ada1-02f83e82bf33] Try to connect to server on start up, server: {serverIp = 'localhost', server main port = 8848}
+14:29:00:606  INFO 26920 --- [main] com.alibaba.nacos.common.remote.client   : [5e958763-9437-4039-ada1-02f83e82bf33] Success to connect to server [localhost:8848] on start up, connectionId = 1755239340487_172.17.0.1_58490
+14:29:00:606  INFO 26920 --- [main] com.alibaba.nacos.common.remote.client   : [5e958763-9437-4039-ada1-02f83e82bf33] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
+14:29:00:606  INFO 26920 --- [main] com.alibaba.nacos.common.remote.client   : [5e958763-9437-4039-ada1-02f83e82bf33] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$478/0x0000000800500440
+14:29:00:606  INFO 26920 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [5e958763-9437-4039-ada1-02f83e82bf33] Notify connected event to listeners.
+14:29:00:653  INFO 26920 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8086 (http) with context path ''
+14:29:00:664  INFO 26920 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP trade-service 192.168.138.1:8086 register finished
+14:29:01:221  INFO 26920 --- [nacos-grpc-client-executor-10] com.alibaba.nacos.common.remote.client   : [5e958763-9437-4039-ada1-02f83e82bf33] Receive server push request, request = NotifySubscriberRequest, requestId = 2
+14:29:01:223  INFO 26920 --- [nacos-grpc-client-executor-10] com.alibaba.nacos.common.remote.client   : [5e958763-9437-4039-ada1-02f83e82bf33] Ack server push request, request = NotifySubscriberRequest, requestId = 2
+14:29:02:791  INFO 26920 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+14:29:02:792  INFO 26920 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+14:29:02:794  INFO 26920 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+14:29:02:809  INFO 26920 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+14:29:02:863  INFO 26920 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+14:29:02:913  INFO 26920 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#7715d43c:0/SimpleConnection@5b7600ec [delegate=amqp://itheima@127.0.0.1:5672//hmall, localPort= 55000]
+14:29:03:020  INFO 26920 --- [main] com.hmall.trade.TradeApplication         : Started TradeApplication in 22.785 seconds (JVM running for 24.786)
+14:29:03:024  INFO 26920 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=trade-service.properties, group=DEFAULT_GROUP
+14:29:03:026  INFO 26920 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=trade-service, group=DEFAULT_GROUP
+14:29:03:026  INFO 26920 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=trade-service-dev.properties, group=DEFAULT_GROUP
+14:29:51:115 ERROR 26920 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:29:51:145 ERROR 26920 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:30:01:116 ERROR 26920 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:30:01:147 ERROR 26920 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:30:11:117 ERROR 26920 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:30:11:149 ERROR 26920 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:30:21:117 ERROR 26920 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:30:21:144 ERROR 26920 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:30:31:117 ERROR 26920 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:30:31:147 ERROR 26920 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:30:41:117 ERROR 26920 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:30:41:158 ERROR 26920 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:30:51:109 ERROR 26920 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:30:51:145 ERROR 26920 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:31:01:113 ERROR 26920 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:31:01:145 ERROR 26920 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:31:11:109 ERROR 26920 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:31:11:157 ERROR 26920 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:31:21:120 ERROR 26920 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:31:21:151 ERROR 26920 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:31:31:109 ERROR 26920 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:31:31:155 ERROR 26920 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:31:41:116 ERROR 26920 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:31:41:149 ERROR 26920 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:31:51:113 ERROR 26920 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:31:51:159 ERROR 26920 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:32:01:109 ERROR 26920 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:32:01:155 ERROR 26920 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:32:11:116 ERROR 26920 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:32:11:147 ERROR 26920 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:32:21:108 ERROR 26920 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:32:21:154 ERROR 26920 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:32:31:108 ERROR 26920 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:32:31:154 ERROR 26920 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:32:41:122 ERROR 26920 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:32:41:153 ERROR 26920 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:32:51:117 ERROR 26920 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:32:51:147 ERROR 26920 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:33:01:111 ERROR 26920 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:33:01:158 ERROR 26920 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:33:11:114 ERROR 26920 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:33:11:148 ERROR 26920 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:33:21:110 ERROR 26920 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:33:21:157 ERROR 26920 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:33:31:117 ERROR 26920 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:33:31:149 ERROR 26920 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:33:41:122 ERROR 26920 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:33:41:154 ERROR 26920 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:33:51:112 ERROR 26920 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:33:51:159 ERROR 26920 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:34:01:112 ERROR 26920 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:34:01:158 ERROR 26920 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:34:11:116 ERROR 26920 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:34:11:148 ERROR 26920 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:34:21:112 ERROR 26920 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:34:21:157 ERROR 26920 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:34:31:111 ERROR 26920 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:34:31:147 ERROR 26920 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:34:41:112 ERROR 26920 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:34:41:145 ERROR 26920 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:34:51:123 ERROR 26920 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:34:51:155 ERROR 26920 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:35:01:115 ERROR 26920 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:35:01:147 ERROR 26920 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:35:11:108 ERROR 26920 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:35:11:148 ERROR 26920 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:35:21:108 ERROR 26920 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:35:21:146 ERROR 26920 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:35:31:121 ERROR 26920 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:35:31:156 ERROR 26920 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:35:41:118 ERROR 26920 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:35:41:150 ERROR 26920 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:35:51:117 ERROR 26920 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:35:51:159 ERROR 26920 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:36:01:119 ERROR 26920 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:36:01:152 ERROR 26920 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:36:11:122 ERROR 26920 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:36:11:153 ERROR 26920 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:36:21:121 ERROR 26920 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:36:21:147 ERROR 26920 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:36:31:113 ERROR 26920 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:36:31:146 ERROR 26920 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:36:41:123 ERROR 26920 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:36:41:153 ERROR 26920 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:36:51:111 ERROR 26920 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:36:51:159 ERROR 26920 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:37:01:109 ERROR 26920 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:37:01:154 ERROR 26920 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:37:11:117 ERROR 26920 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:37:11:148 ERROR 26920 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:37:21:115 ERROR 26920 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:37:21:158 ERROR 26920 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:37:31:122 ERROR 26920 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:37:31:153 ERROR 26920 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:37:41:113 ERROR 26920 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:37:41:162 ERROR 26920 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:37:51:111 ERROR 26920 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:37:51:159 ERROR 26920 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:38:01:120 ERROR 26920 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:38:01:151 ERROR 26920 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:38:11:122 ERROR 26920 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:38:11:153 ERROR 26920 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:38:21:118 ERROR 26920 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:38:21:147 ERROR 26920 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:38:31:114 ERROR 26920 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:38:31:145 ERROR 26920 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:38:41:117 ERROR 26920 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:38:41:147 ERROR 26920 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:38:51:117 ERROR 26920 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:38:51:147 ERROR 26920 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:39:01:120 ERROR 26920 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:39:01:151 ERROR 26920 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:39:11:120 ERROR 26920 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:39:11:152 ERROR 26920 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:39:21:115 ERROR 26920 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:39:21:145 ERROR 26920 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:39:31:117 ERROR 26920 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:39:31:148 ERROR 26920 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:39:41:121 ERROR 26920 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:39:41:152 ERROR 26920 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:39:51:122 ERROR 26920 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:39:51:154 ERROR 26920 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:40:01:122 ERROR 26920 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:40:01:151 ERROR 26920 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:40:11:118 ERROR 26920 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:40:11:150 ERROR 26920 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:40:21:112 ERROR 26920 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:40:21:158 ERROR 26920 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:40:31:123 ERROR 26920 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:40:31:155 ERROR 26920 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:40:41:118 ERROR 26920 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:40:41:149 ERROR 26920 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:40:51:118 ERROR 26920 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:40:51:149 ERROR 26920 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:41:01:110 ERROR 26920 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:41:01:156 ERROR 26920 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:41:11:116 ERROR 26920 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:41:11:147 ERROR 26920 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:41:21:115 ERROR 26920 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:41:21:146 ERROR 26920 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:41:31:117 ERROR 26920 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:41:31:148 ERROR 26920 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:41:41:121 ERROR 26920 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:41:41:152 ERROR 26920 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.default_tx_group', please make sure registry config correct
+14:41:48:085  WARN 26920 --- [Thread-1] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+14:41:48:085  WARN 26920 --- [Thread-5] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+14:41:48:085  WARN 26920 --- [Thread-5] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+14:41:48:086  WARN 26920 --- [Thread-1] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+14:41:48:095  INFO 26920 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+14:41:49:014  INFO 26920 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+14:41:49:773  INFO 26920 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+14:41:49:777  INFO 26920 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+14:41:50:098  INFO 26920 --- [SpringContextShutdownHook] com.alibaba.nacos.common.remote.client   : Shutdown rpc client, set status to shutdown
+14:41:50:098  INFO 26920 --- [SpringContextShutdownHook] com.alibaba.nacos.common.remote.client   : Shutdown client event executor java.util.concurrent.ScheduledThreadPoolExecutor@154feffd[Running, pool size = 2, active threads = 2, queued tasks = 0, completed tasks = 0]
+14:41:50:098  INFO 26920 --- [SpringContextShutdownHook] com.alibaba.nacos.common.remote.client   : Close current connection 1755239340487_172.17.0.1_58490
+14:41:50:102  INFO 26920 --- [nacos-grpc-client-executor-192] c.a.n.c.remote.client.grpc.GrpcClient    : [1755239340487_172.17.0.1_58490]Ignore complete event,isRunning:false,isAbandon=false
+14:41:50:105  INFO 26920 --- [SpringContextShutdownHook] c.a.n.c.remote.client.grpc.GrpcClient    : Shutdown grpc executor java.util.concurrent.ThreadPoolExecutor@41e9ee20[Running, pool size = 5, active threads = 0, queued tasks = 0, completed tasks = 193]
+14:41:50:108  INFO 26920 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+14:41:50:479  INFO 26920 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+14:41:50:479  INFO 26920 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is already stopped
+14:42:02:119  INFO 38856 --- [main] com.alibaba.nacos.common.remote.client   : [RpcClientFactory] create a new rpc client of 9ce5010f-270a-4827-9dff-53af17c20699_config-0
+14:42:02:150  INFO 38856 --- [main] org.reflections.Reflections              : Reflections took 17 ms to scan 1 urls, producing 3 keys and 6 values 
+14:42:02:169  INFO 38856 --- [main] org.reflections.Reflections              : Reflections took 7 ms to scan 1 urls, producing 4 keys and 9 values 
+14:42:02:176  INFO 38856 --- [main] org.reflections.Reflections              : Reflections took 5 ms to scan 1 urls, producing 3 keys and 10 values 
+14:42:02:180  WARN 38856 --- [main] org.reflections.Reflections              : given scan urls are empty. set urls in the configuration
+14:42:02:187  INFO 38856 --- [main] org.reflections.Reflections              : Reflections took 6 ms to scan 1 urls, producing 1 keys and 5 values 
+14:42:02:196  INFO 38856 --- [main] org.reflections.Reflections              : Reflections took 6 ms to scan 1 urls, producing 1 keys and 7 values 
+14:42:02:204  INFO 38856 --- [main] org.reflections.Reflections              : Reflections took 5 ms to scan 1 urls, producing 2 keys and 8 values 
+14:42:02:206  WARN 38856 --- [main] org.reflections.Reflections              : given scan urls are empty. set urls in the configuration
+14:42:02:207  INFO 38856 --- [main] com.alibaba.nacos.common.remote.client   : [9ce5010f-270a-4827-9dff-53af17c20699_config-0] RpcClient init label, labels = {module=config, Vipserver-Tag=null, source=sdk, Amory-Tag=null, Location-Tag=null, taskId=0, AppName=unknown}
+14:42:02:208  INFO 38856 --- [main] com.alibaba.nacos.common.remote.client   : [9ce5010f-270a-4827-9dff-53af17c20699_config-0] Register server push request handler:com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$$Lambda$463/0x00000008003f7040
+14:42:02:208  INFO 38856 --- [main] com.alibaba.nacos.common.remote.client   : [9ce5010f-270a-4827-9dff-53af17c20699_config-0] Register server push request handler:com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$$Lambda$464/0x00000008003f7440
+14:42:02:209  INFO 38856 --- [main] com.alibaba.nacos.common.remote.client   : [9ce5010f-270a-4827-9dff-53af17c20699_config-0] Registry connection listener to current client:com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$1
+14:42:02:209  INFO 38856 --- [main] com.alibaba.nacos.common.remote.client   : [9ce5010f-270a-4827-9dff-53af17c20699_config-0] RpcClient init, ServerListFactory = com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$2
+14:42:02:218  INFO 38856 --- [main] com.alibaba.nacos.common.remote.client   : [9ce5010f-270a-4827-9dff-53af17c20699_config-0] Try to connect to server on start up, server: {serverIp = '127.0.0.1', server main port = 8848}
+14:42:05:402  INFO 38856 --- [main] com.alibaba.nacos.common.remote.client   : [9ce5010f-270a-4827-9dff-53af17c20699_config-0] Success to connect to server [127.0.0.1:8848] on start up, connectionId = 1755240125213_172.17.0.1_33574
+14:42:05:403  INFO 38856 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [9ce5010f-270a-4827-9dff-53af17c20699_config-0] Notify connected event to listeners.
+14:42:05:404  INFO 38856 --- [main] com.alibaba.nacos.common.remote.client   : [9ce5010f-270a-4827-9dff-53af17c20699_config-0] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
+14:42:05:405  INFO 38856 --- [main] com.alibaba.nacos.common.remote.client   : [9ce5010f-270a-4827-9dff-53af17c20699_config-0] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$478/0x00000008003f2440
+14:42:05:456  WARN 38856 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[trade-service] & group[DEFAULT_GROUP]
+14:42:05:462  WARN 38856 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[trade-service.properties] & group[DEFAULT_GROUP]
+14:42:05:467  WARN 38856 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[trade-service-dev.properties] & group[DEFAULT_GROUP]
+14:42:05:468  INFO 38856 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-trade-service-dev.properties,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-trade-service.properties,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-trade-service,DEFAULT_GROUP'}]
+14:42:05:481  INFO 38856 --- [main] com.hmall.trade.TradeApplication         : The following 1 profile is active: "dev"
+14:42:06:171  INFO 38856 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+14:42:06:173  INFO 38856 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+14:42:06:194  INFO 38856 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 0 Redis repository interfaces.
+14:42:06:371  INFO 38856 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=800e651c-b1c9-388d-9b65-b5331943fdb4
+14:42:06:654  INFO 38856 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8086 (http)
+14:42:06:661  INFO 38856 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+14:42:06:662  INFO 38856 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.75]
+14:42:06:801  INFO 38856 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+14:42:06:801  INFO 38856 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1308 ms
+14:42:06:940  INFO 38856 --- [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'item-service' URL not provided. Will try picking an instance via load-balancing.
+14:42:07:907  INFO 38856 --- [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'cart-service' URL not provided. Will try picking an instance via load-balancing.
+14:42:10:404  INFO 38856 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+14:42:10:426  INFO 38856 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+14:42:12:996  INFO 38856 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+14:42:13:148  INFO 38856 --- [main] com.alibaba.nacos.common.remote.client   : [RpcClientFactory] create a new rpc client of 09eb80fa-c2ff-4bce-a719-54d2e0aa2ad6
+14:42:13:149  INFO 38856 --- [main] com.alibaba.nacos.common.remote.client   : [09eb80fa-c2ff-4bce-a719-54d2e0aa2ad6] RpcClient init label, labels = {module=naming, source=sdk}
+14:42:13:150  INFO 38856 --- [main] com.alibaba.nacos.common.remote.client   : [09eb80fa-c2ff-4bce-a719-54d2e0aa2ad6] RpcClient init, ServerListFactory = com.alibaba.nacos.client.naming.core.ServerListManager
+14:42:13:151  INFO 38856 --- [main] com.alibaba.nacos.common.remote.client   : [09eb80fa-c2ff-4bce-a719-54d2e0aa2ad6] Registry connection listener to current client:com.alibaba.nacos.client.naming.remote.gprc.redo.NamingGrpcRedoService
+14:42:13:152  INFO 38856 --- [main] com.alibaba.nacos.common.remote.client   : [09eb80fa-c2ff-4bce-a719-54d2e0aa2ad6] Register server push request handler:com.alibaba.nacos.client.naming.remote.gprc.NamingPushRequestHandler
+14:42:13:152  INFO 38856 --- [main] com.alibaba.nacos.common.remote.client   : [09eb80fa-c2ff-4bce-a719-54d2e0aa2ad6] Try to connect to server on start up, server: {serverIp = 'localhost', server main port = 8848}
+14:42:13:276  INFO 38856 --- [main] com.alibaba.nacos.common.remote.client   : [09eb80fa-c2ff-4bce-a719-54d2e0aa2ad6] Success to connect to server [localhost:8848] on start up, connectionId = 1755240133160_172.17.0.1_58558
+14:42:13:276  INFO 38856 --- [main] com.alibaba.nacos.common.remote.client   : [09eb80fa-c2ff-4bce-a719-54d2e0aa2ad6] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
+14:42:13:276  INFO 38856 --- [main] com.alibaba.nacos.common.remote.client   : [09eb80fa-c2ff-4bce-a719-54d2e0aa2ad6] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$478/0x00000008003f2440
+14:42:13:276  INFO 38856 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [09eb80fa-c2ff-4bce-a719-54d2e0aa2ad6] Notify connected event to listeners.
+14:42:13:311  INFO 38856 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8086 (http) with context path ''
+14:42:13:318  INFO 38856 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP trade-service 192.168.138.1:8086 register finished
+14:42:13:817  INFO 38856 --- [nacos-grpc-client-executor-7] com.alibaba.nacos.common.remote.client   : [09eb80fa-c2ff-4bce-a719-54d2e0aa2ad6] Receive server push request, request = NotifySubscriberRequest, requestId = 10
+14:42:13:821  INFO 38856 --- [nacos-grpc-client-executor-7] com.alibaba.nacos.common.remote.client   : [09eb80fa-c2ff-4bce-a719-54d2e0aa2ad6] Ack server push request, request = NotifySubscriberRequest, requestId = 10
+14:42:15:455  INFO 38856 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+14:42:15:456  INFO 38856 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+14:42:15:459  INFO 38856 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+14:42:15:473  INFO 38856 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+14:42:15:522  INFO 38856 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+14:42:15:551  INFO 38856 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#6e00d737:0/SimpleConnection@52a23575 [delegate=amqp://itheima@127.0.0.1:5672//hmall, localPort= 56515]
+14:42:15:603  INFO 38856 --- [main] com.hmall.trade.TradeApplication         : Started TradeApplication in 18.46 seconds (JVM running for 19.901)
+14:42:15:607  INFO 38856 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=trade-service.properties, group=DEFAULT_GROUP
+14:42:15:608  INFO 38856 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=trade-service, group=DEFAULT_GROUP
+14:42:15:608  INFO 38856 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=trade-service-dev.properties, group=DEFAULT_GROUP
+14:47:24:390  WARN 38856 --- [Thread-5] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+14:47:24:390  WARN 38856 --- [Thread-1] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+14:47:24:390  WARN 38856 --- [Thread-5] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+14:47:24:391  WARN 38856 --- [Thread-1] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+14:47:24:403  INFO 38856 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+14:47:24:980  INFO 38856 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+14:47:25:823  INFO 38856 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+14:47:25:828  INFO 38856 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+14:47:26:150  INFO 38856 --- [SpringApplicationShutdownHook] com.alibaba.nacos.common.remote.client   : Shutdown rpc client, set status to shutdown
+14:47:26:151  INFO 38856 --- [SpringApplicationShutdownHook] com.alibaba.nacos.common.remote.client   : Shutdown client event executor java.util.concurrent.ScheduledThreadPoolExecutor@43b7894e[Running, pool size = 2, active threads = 2, queued tasks = 0, completed tasks = 0]
+14:47:26:151  INFO 38856 --- [SpringApplicationShutdownHook] com.alibaba.nacos.common.remote.client   : Close current connection 1755240133160_172.17.0.1_58558
+14:47:26:154  INFO 38856 --- [nacos-grpc-client-executor-72] c.a.n.c.remote.client.grpc.GrpcClient    : [1755240133160_172.17.0.1_58558]Ignore complete event,isRunning:false,isAbandon=false
+14:47:26:156  INFO 38856 --- [SpringApplicationShutdownHook] c.a.n.c.remote.client.grpc.GrpcClient    : Shutdown grpc executor java.util.concurrent.ThreadPoolExecutor@27b09b62[Running, pool size = 4, active threads = 0, queued tasks = 0, completed tasks = 73]
+14:47:26:160  INFO 38856 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is already stopped
+14:47:44:987  INFO 4988 --- [main] com.alibaba.nacos.common.remote.client   : [RpcClientFactory] create a new rpc client of 75280844-3cde-4c33-b265-e8646fc36303_config-0
+14:47:45:037  INFO 4988 --- [main] org.reflections.Reflections              : Reflections took 25 ms to scan 1 urls, producing 3 keys and 6 values 
+14:47:45:070  INFO 4988 --- [main] org.reflections.Reflections              : Reflections took 13 ms to scan 1 urls, producing 4 keys and 9 values 
+14:47:45:079  INFO 4988 --- [main] org.reflections.Reflections              : Reflections took 5 ms to scan 1 urls, producing 3 keys and 10 values 
+14:47:45:084  WARN 4988 --- [main] org.reflections.Reflections              : given scan urls are empty. set urls in the configuration
+14:47:45:093  INFO 4988 --- [main] org.reflections.Reflections              : Reflections took 7 ms to scan 1 urls, producing 1 keys and 5 values 
+14:47:45:106  INFO 4988 --- [main] org.reflections.Reflections              : Reflections took 9 ms to scan 1 urls, producing 1 keys and 7 values 
+14:47:45:119  INFO 4988 --- [main] org.reflections.Reflections              : Reflections took 10 ms to scan 1 urls, producing 2 keys and 8 values 
+14:47:45:124  WARN 4988 --- [main] org.reflections.Reflections              : given scan urls are empty. set urls in the configuration
+14:47:45:125  INFO 4988 --- [main] com.alibaba.nacos.common.remote.client   : [75280844-3cde-4c33-b265-e8646fc36303_config-0] RpcClient init label, labels = {module=config, Vipserver-Tag=null, source=sdk, Amory-Tag=null, Location-Tag=null, taskId=0, AppName=unknown}
+14:47:45:126  INFO 4988 --- [main] com.alibaba.nacos.common.remote.client   : [75280844-3cde-4c33-b265-e8646fc36303_config-0] Register server push request handler:com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$$Lambda$463/0x00000008003f7040
+14:47:45:126  INFO 4988 --- [main] com.alibaba.nacos.common.remote.client   : [75280844-3cde-4c33-b265-e8646fc36303_config-0] Register server push request handler:com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$$Lambda$464/0x00000008003f7440
+14:47:45:127  INFO 4988 --- [main] com.alibaba.nacos.common.remote.client   : [75280844-3cde-4c33-b265-e8646fc36303_config-0] Registry connection listener to current client:com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$1
+14:47:45:128  INFO 4988 --- [main] com.alibaba.nacos.common.remote.client   : [75280844-3cde-4c33-b265-e8646fc36303_config-0] RpcClient init, ServerListFactory = com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$2
+14:47:45:144  INFO 4988 --- [main] com.alibaba.nacos.common.remote.client   : [75280844-3cde-4c33-b265-e8646fc36303_config-0] Try to connect to server on start up, server: {serverIp = '127.0.0.1', server main port = 8848}
+14:47:49:752  INFO 4988 --- [main] com.alibaba.nacos.common.remote.client   : [75280844-3cde-4c33-b265-e8646fc36303_config-0] Success to connect to server [127.0.0.1:8848] on start up, connectionId = 1755240469528_172.17.0.1_48036
+14:47:49:754  INFO 4988 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [75280844-3cde-4c33-b265-e8646fc36303_config-0] Notify connected event to listeners.
+14:47:49:754  INFO 4988 --- [main] com.alibaba.nacos.common.remote.client   : [75280844-3cde-4c33-b265-e8646fc36303_config-0] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
+14:47:49:755  INFO 4988 --- [main] com.alibaba.nacos.common.remote.client   : [75280844-3cde-4c33-b265-e8646fc36303_config-0] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$478/0x00000008004fe840
+14:47:49:840  WARN 4988 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[trade-service] & group[DEFAULT_GROUP]
+14:47:49:848  WARN 4988 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[trade-service.properties] & group[DEFAULT_GROUP]
+14:47:49:856  WARN 4988 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[trade-service-dev.properties] & group[DEFAULT_GROUP]
+14:47:49:857  INFO 4988 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-trade-service-dev.properties,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-trade-service.properties,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-trade-service,DEFAULT_GROUP'}]
+14:47:49:877  INFO 4988 --- [main] com.hmall.trade.TradeApplication         : The following 1 profile is active: "dev"
+14:47:50:709  INFO 4988 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+14:47:50:711  INFO 4988 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+14:47:50:738  INFO 4988 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13 ms. Found 0 Redis repository interfaces.
+14:47:50:987  INFO 4988 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=800e651c-b1c9-388d-9b65-b5331943fdb4
+14:47:51:455  INFO 4988 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8086 (http)
+14:47:51:466  INFO 4988 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+14:47:51:466  INFO 4988 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.75]
+14:47:51:686  INFO 4988 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+14:47:51:687  INFO 4988 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1794 ms
+14:47:51:870  INFO 4988 --- [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'item-service' URL not provided. Will try picking an instance via load-balancing.
+14:47:53:042  INFO 4988 --- [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'cart-service' URL not provided. Will try picking an instance via load-balancing.
+14:47:55:924  INFO 4988 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+14:47:55:951  INFO 4988 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+14:47:58:709  INFO 4988 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+14:47:58:895  INFO 4988 --- [main] com.alibaba.nacos.common.remote.client   : [RpcClientFactory] create a new rpc client of fe0a1e5b-2470-4c1e-b833-822db2d02448
+14:47:58:895  INFO 4988 --- [main] com.alibaba.nacos.common.remote.client   : [fe0a1e5b-2470-4c1e-b833-822db2d02448] RpcClient init label, labels = {module=naming, source=sdk}
+14:47:58:897  INFO 4988 --- [main] com.alibaba.nacos.common.remote.client   : [fe0a1e5b-2470-4c1e-b833-822db2d02448] RpcClient init, ServerListFactory = com.alibaba.nacos.client.naming.core.ServerListManager
+14:47:58:898  INFO 4988 --- [main] com.alibaba.nacos.common.remote.client   : [fe0a1e5b-2470-4c1e-b833-822db2d02448] Registry connection listener to current client:com.alibaba.nacos.client.naming.remote.gprc.redo.NamingGrpcRedoService
+14:47:58:898  INFO 4988 --- [main] com.alibaba.nacos.common.remote.client   : [fe0a1e5b-2470-4c1e-b833-822db2d02448] Register server push request handler:com.alibaba.nacos.client.naming.remote.gprc.NamingPushRequestHandler
+14:47:58:899  INFO 4988 --- [main] com.alibaba.nacos.common.remote.client   : [fe0a1e5b-2470-4c1e-b833-822db2d02448] Try to connect to server on start up, server: {serverIp = 'localhost', server main port = 8848}
+14:47:59:016  INFO 4988 --- [main] com.alibaba.nacos.common.remote.client   : [fe0a1e5b-2470-4c1e-b833-822db2d02448] Success to connect to server [localhost:8848] on start up, connectionId = 1755240478905_172.17.0.1_54706
+14:47:59:016  INFO 4988 --- [main] com.alibaba.nacos.common.remote.client   : [fe0a1e5b-2470-4c1e-b833-822db2d02448] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
+14:47:59:017  INFO 4988 --- [main] com.alibaba.nacos.common.remote.client   : [fe0a1e5b-2470-4c1e-b833-822db2d02448] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$478/0x00000008004fe840
+14:47:59:016  INFO 4988 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [fe0a1e5b-2470-4c1e-b833-822db2d02448] Notify connected event to listeners.
+14:47:59:055  INFO 4988 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8086 (http) with context path ''
+14:47:59:063  INFO 4988 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP trade-service 192.168.138.1:8086 register finished
+14:47:59:621  INFO 4988 --- [nacos-grpc-client-executor-6] com.alibaba.nacos.common.remote.client   : [fe0a1e5b-2470-4c1e-b833-822db2d02448] Receive server push request, request = NotifySubscriberRequest, requestId = 24
+14:47:59:623  INFO 4988 --- [nacos-grpc-client-executor-6] com.alibaba.nacos.common.remote.client   : [fe0a1e5b-2470-4c1e-b833-822db2d02448] Ack server push request, request = NotifySubscriberRequest, requestId = 24
+14:48:01:221  INFO 4988 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+14:48:01:221  INFO 4988 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+14:48:01:224  INFO 4988 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+14:48:01:238  INFO 4988 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+14:48:01:289  INFO 4988 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+14:48:01:322  INFO 4988 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#237ee2e1:0/SimpleConnection@7f33ad20 [delegate=amqp://itheima@127.0.0.1:5672//hmall, localPort= 57039]
+14:48:01:379  INFO 4988 --- [main] com.hmall.trade.TradeApplication         : Started TradeApplication in 22.308 seconds (JVM running for 23.858)
+14:48:01:383  INFO 4988 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=trade-service.properties, group=DEFAULT_GROUP
+14:48:01:384  INFO 4988 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=trade-service, group=DEFAULT_GROUP
+14:48:01:384  INFO 4988 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=trade-service-dev.properties, group=DEFAULT_GROUP
+14:51:03:958  INFO 4988 --- [http-nio-8086-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+14:51:03:958  INFO 4988 --- [http-nio-8086-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+14:51:03:966  INFO 4988 --- [http-nio-8086-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+14:51:04:038  INFO 4988 --- [http-nio-8086-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+14:51:04:876  INFO 4988 --- [http-nio-8086-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+14:51:05:226 DEBUG 4988 --- [http-nio-8086-exec-1] c.hmall.trade.mapper.OrderMapper.insert  : ==>  Preparing: INSERT INTO `order` ( id, total_fee, payment_type, user_id, status ) VALUES ( ?, ?, ?, ?, ? )
+14:51:05:257 DEBUG 4988 --- [http-nio-8086-exec-1] c.hmall.trade.mapper.OrderMapper.insert  : ==> Parameters: 1956247253539467266(Long), 1200400(Integer), 3(Integer), 1(Long), 1(Integer)
+14:51:05:348 DEBUG 4988 --- [http-nio-8086-exec-1] c.hmall.trade.mapper.OrderMapper.insert  : <==    Updates: 1
+14:51:05:360 DEBUG 4988 --- [http-nio-8086-exec-1] c.h.t.mapper.OrderDetailMapper.insert    : ==>  Preparing: INSERT INTO order_detail ( order_id, item_id, num, name, spec, price, image ) VALUES ( ?, ?, ?, ?, ?, ?, ? )
+14:51:05:363 DEBUG 4988 --- [http-nio-8086-exec-1] c.h.t.mapper.OrderDetailMapper.insert    : ==> Parameters: 1956247253539467266(Long), 4026319(Long), 1(Integer), TCL 65A950C 65英寸32核人工智能 HDR曲面超薄4K电视金属机身（枪色）(String), {"版本": "65英寸"}(String), 394400(Integer), https://m.360buyimg.com/mobilecms/s720x720_jfs/t1/5269/2/12146/122833/5bd2a509Ed9ba6c1f/6a50f35bfacecbc6.jpg!q70.jpg.webp(String)
+14:51:05:364 DEBUG 4988 --- [http-nio-8086-exec-1] c.h.t.mapper.OrderDetailMapper.insert    : ==> Parameters: 1956247253539467266(Long), 100001511821(Long), 26(Integer), HMDIME 牛仔背带裤女2018秋冬新品 韩版学院风潮流百搭弹力修身补丁学生吊带长裤女 AXNZ369 深蓝 30(String), {"颜色": "蓝色", "尺码": "30"}(String), 13700(Integer), https://m.360buyimg.com/mobilecms/s720x720_jfs/t30892/263/313055374/557791/c98e9abc/5bef811aN036f7c3b.jpg!q70.jpg.webp(String)
+14:51:05:365 DEBUG 4988 --- [http-nio-8086-exec-1] c.h.t.mapper.OrderDetailMapper.insert    : ==> Parameters: 1956247253539467266(Long), 100001905417(Long), 2(Integer), 【千玺代言】华为新品 HUAWEI nova 4 极点全面屏手机 2000万超广角三摄 8GB+128GB 蜜语红 全网通双卡双待(String), {"颜色": "红色"}(String), 224900(Integer), https://m.360buyimg.com/mobilecms/s720x720_jfs/t1/20085/14/1076/149604/5c0f8dd2Ebafd3bfd/0cb34a7826cbe1c3.jpg!q70.jpg.webp(String)
+14:51:05:623  INFO 4988 --- [nacos-grpc-client-executor-50] com.alibaba.nacos.common.remote.client   : [fe0a1e5b-2470-4c1e-b833-822db2d02448] Receive server push request, request = NotifySubscriberRequest, requestId = 32
+14:51:05:624  INFO 4988 --- [nacos-grpc-client-executor-50] com.alibaba.nacos.common.remote.client   : [fe0a1e5b-2470-4c1e-b833-822db2d02448] Ack server push request, request = NotifySubscriberRequest, requestId = 32
+14:51:06:121  INFO 4988 --- [nacos-grpc-client-executor-52] com.alibaba.nacos.common.remote.client   : [fe0a1e5b-2470-4c1e-b833-822db2d02448] Receive server push request, request = NotifySubscriberRequest, requestId = 33
+14:51:06:121  INFO 4988 --- [nacos-grpc-client-executor-52] com.alibaba.nacos.common.remote.client   : [fe0a1e5b-2470-4c1e-b833-822db2d02448] Ack server push request, request = NotifySubscriberRequest, requestId = 33
+14:51:08:384 DEBUG 4988 --- [http-nio-8086-exec-2] c.hmall.trade.mapper.OrderMapper.insert  : ==>  Preparing: INSERT INTO `order` ( id, total_fee, payment_type, user_id, status ) VALUES ( ?, ?, ?, ?, ? )
+14:51:08:391 DEBUG 4988 --- [http-nio-8086-exec-2] c.hmall.trade.mapper.OrderMapper.insert  : ==> Parameters: 1956247266818633730(Long), 1200400(Integer), 3(Integer), 1(Long), 1(Integer)
+14:51:08:452 DEBUG 4988 --- [http-nio-8086-exec-2] c.hmall.trade.mapper.OrderMapper.insert  : <==    Updates: 1
+14:51:08:453 DEBUG 4988 --- [http-nio-8086-exec-2] c.h.t.mapper.OrderDetailMapper.insert    : ==>  Preparing: INSERT INTO order_detail ( order_id, item_id, num, name, spec, price, image ) VALUES ( ?, ?, ?, ?, ?, ?, ? )
+14:51:08:454 DEBUG 4988 --- [http-nio-8086-exec-2] c.h.t.mapper.OrderDetailMapper.insert    : ==> Parameters: 1956247266818633730(Long), 4026319(Long), 1(Integer), TCL 65A950C 65英寸32核人工智能 HDR曲面超薄4K电视金属机身（枪色）(String), {"版本": "65英寸"}(String), 394400(Integer), https://m.360buyimg.com/mobilecms/s720x720_jfs/t1/5269/2/12146/122833/5bd2a509Ed9ba6c1f/6a50f35bfacecbc6.jpg!q70.jpg.webp(String)
+14:51:08:455 DEBUG 4988 --- [http-nio-8086-exec-2] c.h.t.mapper.OrderDetailMapper.insert    : ==> Parameters: 1956247266818633730(Long), 100001511821(Long), 26(Integer), HMDIME 牛仔背带裤女2018秋冬新品 韩版学院风潮流百搭弹力修身补丁学生吊带长裤女 AXNZ369 深蓝 30(String), {"颜色": "蓝色", "尺码": "30"}(String), 13700(Integer), https://m.360buyimg.com/mobilecms/s720x720_jfs/t30892/263/313055374/557791/c98e9abc/5bef811aN036f7c3b.jpg!q70.jpg.webp(String)
+14:51:08:457 DEBUG 4988 --- [http-nio-8086-exec-2] c.h.t.mapper.OrderDetailMapper.insert    : ==> Parameters: 1956247266818633730(Long), 100001905417(Long), 2(Integer), 【千玺代言】华为新品 HUAWEI nova 4 极点全面屏手机 2000万超广角三摄 8GB+128GB 蜜语红 全网通双卡双待(String), {"颜色": "红色"}(String), 224900(Integer), https://m.360buyimg.com/mobilecms/s720x720_jfs/t1/20085/14/1076/149604/5c0f8dd2Ebafd3bfd/0cb34a7826cbe1c3.jpg!q70.jpg.webp(String)
+14:51:09:094 DEBUG 4988 --- [http-nio-8086-exec-3] c.h.trade.mapper.OrderMapper.selectById  : ==>  Preparing: SELECT id,total_fee,payment_type,user_id,status,create_time,pay_time,consign_time,end_time,close_time,comment_time,update_time FROM `order` WHERE id=?
+14:51:09:095 DEBUG 4988 --- [http-nio-8086-exec-3] c.h.trade.mapper.OrderMapper.selectById  : ==> Parameters: 1956247266818633730(Long)
+14:51:09:145 DEBUG 4988 --- [http-nio-8086-exec-3] c.h.trade.mapper.OrderMapper.selectById  : <==      Total: 1
+14:51:13:972 DEBUG 4988 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.h.trade.mapper.OrderMapper.updateById  : ==>  Preparing: UPDATE `order` SET status=?, pay_time=? WHERE id=?
+14:51:13:976 DEBUG 4988 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.h.trade.mapper.OrderMapper.updateById  : ==> Parameters: 2(Integer), 2025-08-15T14:51:13.928784400(LocalDateTime), 1956247266818633730(Long)
+14:51:14:049 DEBUG 4988 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.h.trade.mapper.OrderMapper.updateById  : <==    Updates: 1
+14:51:14:077 DEBUG 4988 --- [http-nio-8086-exec-4] c.h.trade.mapper.OrderMapper.selectById  : ==>  Preparing: SELECT id,total_fee,payment_type,user_id,status,create_time,pay_time,consign_time,end_time,close_time,comment_time,update_time FROM `order` WHERE id=?
+14:51:14:077 DEBUG 4988 --- [http-nio-8086-exec-4] c.h.trade.mapper.OrderMapper.selectById  : ==> Parameters: 1956247266818633730(Long)
+14:51:14:125 DEBUG 4988 --- [http-nio-8086-exec-4] c.h.trade.mapper.OrderMapper.selectById  : <==      Total: 1
+14:52:22:004 DEBUG 4988 --- [http-nio-8086-exec-6] c.hmall.trade.mapper.OrderMapper.insert  : ==>  Preparing: INSERT INTO `order` ( id, total_fee, payment_type, user_id, status ) VALUES ( ?, ?, ?, ?, ? )
+14:52:22:004 DEBUG 4988 --- [http-nio-8086-exec-6] c.hmall.trade.mapper.OrderMapper.insert  : ==> Parameters: 1956247575603294210(Long), 13700(Integer), 3(Integer), 1(Long), 1(Integer)
+14:52:22:067 DEBUG 4988 --- [http-nio-8086-exec-6] c.hmall.trade.mapper.OrderMapper.insert  : <==    Updates: 1
+14:52:22:067 DEBUG 4988 --- [http-nio-8086-exec-6] c.h.t.mapper.OrderDetailMapper.insert    : ==>  Preparing: INSERT INTO order_detail ( order_id, item_id, num, name, spec, price, image ) VALUES ( ?, ?, ?, ?, ?, ?, ? )
+14:52:22:067 DEBUG 4988 --- [http-nio-8086-exec-6] c.h.t.mapper.OrderDetailMapper.insert    : ==> Parameters: 1956247575603294210(Long), 100001511821(Long), 1(Integer), HMDIME 牛仔背带裤女2018秋冬新品 韩版学院风潮流百搭弹力修身补丁学生吊带长裤女 AXNZ369 深蓝 30(String), {"颜色": "蓝色", "尺码": "30"}(String), 13700(Integer), https://m.360buyimg.com/mobilecms/s720x720_jfs/t30892/263/313055374/557791/c98e9abc/5bef811aN036f7c3b.jpg!q70.jpg.webp(String)
+14:52:22:518 DEBUG 4988 --- [http-nio-8086-exec-7] c.h.trade.mapper.OrderMapper.selectById  : ==>  Preparing: SELECT id,total_fee,payment_type,user_id,status,create_time,pay_time,consign_time,end_time,close_time,comment_time,update_time FROM `order` WHERE id=?
+14:52:22:520 DEBUG 4988 --- [http-nio-8086-exec-7] c.h.trade.mapper.OrderMapper.selectById  : ==> Parameters: 1956247575603294210(Long)
+14:52:22:551 DEBUG 4988 --- [http-nio-8086-exec-7] c.h.trade.mapper.OrderMapper.selectById  : <==      Total: 1
+14:52:26:532 DEBUG 4988 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.h.trade.mapper.OrderMapper.updateById  : ==>  Preparing: UPDATE `order` SET status=?, pay_time=? WHERE id=?
+14:52:26:533 DEBUG 4988 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.h.trade.mapper.OrderMapper.updateById  : ==> Parameters: 2(Integer), 2025-08-15T14:52:26.501321800(LocalDateTime), 1956247575603294210(Long)
+14:52:26:601 DEBUG 4988 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.h.trade.mapper.OrderMapper.updateById  : <==    Updates: 1
+14:52:26:639 DEBUG 4988 --- [http-nio-8086-exec-8] c.h.trade.mapper.OrderMapper.selectById  : ==>  Preparing: SELECT id,total_fee,payment_type,user_id,status,create_time,pay_time,consign_time,end_time,close_time,comment_time,update_time FROM `order` WHERE id=?
+14:52:26:640 DEBUG 4988 --- [http-nio-8086-exec-8] c.h.trade.mapper.OrderMapper.selectById  : ==> Parameters: 1956247575603294210(Long)
+14:52:26:672 DEBUG 4988 --- [http-nio-8086-exec-8] c.h.trade.mapper.OrderMapper.selectById  : <==      Total: 1
+14:54:20:292 DEBUG 4988 --- [http-nio-8086-exec-10] c.hmall.trade.mapper.OrderMapper.insert  : ==>  Preparing: INSERT INTO `order` ( id, total_fee, payment_type, user_id, status ) VALUES ( ?, ?, ?, ?, ? )
+14:54:20:292 DEBUG 4988 --- [http-nio-8086-exec-10] c.hmall.trade.mapper.OrderMapper.insert  : ==> Parameters: 1956248071676211201(Long), 632800(Integer), 3(Integer), 1(Long), 1(Integer)
+14:54:20:354 DEBUG 4988 --- [http-nio-8086-exec-10] c.hmall.trade.mapper.OrderMapper.insert  : <==    Updates: 1
+14:54:20:356 DEBUG 4988 --- [http-nio-8086-exec-10] c.h.t.mapper.OrderDetailMapper.insert    : ==>  Preparing: INSERT INTO order_detail ( order_id, item_id, num, name, spec, price, image ) VALUES ( ?, ?, ?, ?, ?, ?, ? )
+14:54:20:357 DEBUG 4988 --- [http-nio-8086-exec-10] c.h.t.mapper.OrderDetailMapper.insert    : ==> Parameters: 1956248071676211201(Long), 1861102(Long), 1(Integer), Apple iPhone 6s Plus (A1699) 128G 玫瑰金色 移动联通电信4G手机(String), {"颜色": "金色"}(String), 632800(Integer), https://m.360buyimg.com/mobilecms/s720x720_jfs/t2302/16/135479564/94882/c76da045/55f0e877N3c24faa3.jpg!q70.jpg.webp(String)
+14:54:20:799 DEBUG 4988 --- [http-nio-8086-exec-1] c.h.trade.mapper.OrderMapper.selectById  : ==>  Preparing: SELECT id,total_fee,payment_type,user_id,status,create_time,pay_time,consign_time,end_time,close_time,comment_time,update_time FROM `order` WHERE id=?
+14:54:20:800 DEBUG 4988 --- [http-nio-8086-exec-1] c.h.trade.mapper.OrderMapper.selectById  : ==> Parameters: 1956248071676211201(Long)
+14:54:20:833 DEBUG 4988 --- [http-nio-8086-exec-1] c.h.trade.mapper.OrderMapper.selectById  : <==      Total: 1
+14:55:59:387 DEBUG 4988 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.h.trade.mapper.OrderMapper.updateById  : ==>  Preparing: UPDATE `order` SET status=?, pay_time=? WHERE id=?
+14:55:59:388 DEBUG 4988 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.h.trade.mapper.OrderMapper.updateById  : ==> Parameters: 2(Integer), 2025-08-15T14:55:59.354571500(LocalDateTime), 1956248071676211201(Long)
+14:55:59:462 DEBUG 4988 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.h.trade.mapper.OrderMapper.updateById  : <==    Updates: 1
+14:55:59:495 DEBUG 4988 --- [http-nio-8086-exec-3] c.h.trade.mapper.OrderMapper.selectById  : ==>  Preparing: SELECT id,total_fee,payment_type,user_id,status,create_time,pay_time,consign_time,end_time,close_time,comment_time,update_time FROM `order` WHERE id=?
+14:55:59:496 DEBUG 4988 --- [http-nio-8086-exec-3] c.h.trade.mapper.OrderMapper.selectById  : ==> Parameters: 1956248071676211201(Long)
+14:55:59:528 DEBUG 4988 --- [http-nio-8086-exec-3] c.h.trade.mapper.OrderMapper.selectById  : <==      Total: 1
+15:00:29:337 DEBUG 4988 --- [http-nio-8086-exec-5] c.hmall.trade.mapper.OrderMapper.insert  : ==>  Preparing: INSERT INTO `order` ( id, total_fee, payment_type, user_id, status ) VALUES ( ?, ?, ?, ?, ? )
+15:00:29:338 DEBUG 4988 --- [http-nio-8086-exec-5] c.hmall.trade.mapper.OrderMapper.insert  : ==> Parameters: 1956249619630239745(Long), 9700(Integer), 3(Integer), 1(Long), 1(Integer)
+15:00:29:401 DEBUG 4988 --- [http-nio-8086-exec-5] c.hmall.trade.mapper.OrderMapper.insert  : <==    Updates: 1
+15:00:29:402 DEBUG 4988 --- [http-nio-8086-exec-5] c.h.t.mapper.OrderDetailMapper.insert    : ==>  Preparing: INSERT INTO order_detail ( order_id, item_id, num, name, spec, price, image ) VALUES ( ?, ?, ?, ?, ?, ?, ? )
+15:00:29:403 DEBUG 4988 --- [http-nio-8086-exec-5] c.h.t.mapper.OrderDetailMapper.insert    : ==> Parameters: 1956249619630239745(Long), 1533902(Long), 1(Integer), 新西兰进口牛奶 纽仕兰 3.5g蛋白质全脂牛奶 250ml*24整箱装纯牛奶(String), {}(String), 9700(Integer), https://m.360buyimg.com/mobilecms/s720x720_jfs/t3526/295/888755633/189982/16ea21b4/5816dce5N70820f42.jpg!q70.jpg.webp(String)
+15:00:29:845 DEBUG 4988 --- [http-nio-8086-exec-6] c.h.trade.mapper.OrderMapper.selectById  : ==>  Preparing: SELECT id,total_fee,payment_type,user_id,status,create_time,pay_time,consign_time,end_time,close_time,comment_time,update_time FROM `order` WHERE id=?
+15:00:29:845 DEBUG 4988 --- [http-nio-8086-exec-6] c.h.trade.mapper.OrderMapper.selectById  : ==> Parameters: 1956249619630239745(Long)
+15:00:29:877 DEBUG 4988 --- [http-nio-8086-exec-6] c.h.trade.mapper.OrderMapper.selectById  : <==      Total: 1
+15:01:57:731 DEBUG 4988 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.h.trade.mapper.OrderMapper.updateById  : ==>  Preparing: UPDATE `order` SET status=?, pay_time=? WHERE id=?
+15:01:57:732 DEBUG 4988 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.h.trade.mapper.OrderMapper.updateById  : ==> Parameters: 2(Integer), 2025-08-15T15:01:57.700574100(LocalDateTime), 1956249619630239745(Long)
+15:01:57:803 DEBUG 4988 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.h.trade.mapper.OrderMapper.updateById  : <==    Updates: 1
+15:01:57:842 DEBUG 4988 --- [http-nio-8086-exec-8] c.h.trade.mapper.OrderMapper.selectById  : ==>  Preparing: SELECT id,total_fee,payment_type,user_id,status,create_time,pay_time,consign_time,end_time,close_time,comment_time,update_time FROM `order` WHERE id=?
+15:01:57:842 DEBUG 4988 --- [http-nio-8086-exec-8] c.h.trade.mapper.OrderMapper.selectById  : ==> Parameters: 1956249619630239745(Long)
+15:01:57:902 DEBUG 4988 --- [http-nio-8086-exec-8] c.h.trade.mapper.OrderMapper.selectById  : <==      Total: 1
+15:05:08:886  WARN 4988 --- [Thread-5] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+15:05:08:886  WARN 4988 --- [Thread-1] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+15:05:08:886  WARN 4988 --- [Thread-5] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+15:05:08:886  WARN 4988 --- [Thread-1] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+15:05:08:896  INFO 4988 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+15:05:09:398  INFO 4988 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+15:05:09:529  INFO 4988 --- [nacos-grpc-client-executor-241] com.alibaba.nacos.common.remote.client   : [fe0a1e5b-2470-4c1e-b833-822db2d02448] Receive server push request, request = NotifySubscriberRequest, requestId = 36
+15:05:09:531  INFO 4988 --- [nacos-grpc-client-executor-241] com.alibaba.nacos.common.remote.client   : [fe0a1e5b-2470-4c1e-b833-822db2d02448] Ack server push request, request = NotifySubscriberRequest, requestId = 36
+15:05:09:535  INFO 4988 --- [nacos-grpc-client-executor-242] com.alibaba.nacos.common.remote.client   : [fe0a1e5b-2470-4c1e-b833-822db2d02448] Receive server push request, request = NotifySubscriberRequest, requestId = 37
+15:05:09:537  INFO 4988 --- [nacos-grpc-client-executor-242] com.alibaba.nacos.common.remote.client   : [fe0a1e5b-2470-4c1e-b833-822db2d02448] Ack server push request, request = NotifySubscriberRequest, requestId = 37
+15:05:10:213  INFO 4988 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+15:05:10:215  INFO 4988 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+15:05:10:538  INFO 4988 --- [SpringApplicationShutdownHook] com.alibaba.nacos.common.remote.client   : Shutdown rpc client, set status to shutdown
+15:05:10:538  INFO 4988 --- [SpringApplicationShutdownHook] com.alibaba.nacos.common.remote.client   : Shutdown client event executor java.util.concurrent.ScheduledThreadPoolExecutor@1b0b8ab1[Running, pool size = 2, active threads = 2, queued tasks = 0, completed tasks = 0]
+15:05:10:538  INFO 4988 --- [SpringApplicationShutdownHook] com.alibaba.nacos.common.remote.client   : Close current connection 1755240478905_172.17.0.1_54706
+15:05:10:541  INFO 4988 --- [nacos-grpc-client-executor-245] c.a.n.c.remote.client.grpc.GrpcClient    : [1755240478905_172.17.0.1_54706]Ignore complete event,isRunning:false,isAbandon=false
+15:05:10:545  INFO 4988 --- [SpringApplicationShutdownHook] c.a.n.c.remote.client.grpc.GrpcClient    : Shutdown grpc executor java.util.concurrent.ThreadPoolExecutor@3c4bb9db[Running, pool size = 8, active threads = 0, queued tasks = 0, completed tasks = 246]
+15:05:10:549  INFO 4988 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+15:05:13:596  INFO 4988 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+15:05:13:600  INFO 4988 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is already stopped
+15:05:27:380  INFO 10920 --- [main] com.alibaba.nacos.common.remote.client   : [RpcClientFactory] create a new rpc client of 492c859f-dfed-4ab3-8b9b-775e6508fa23_config-0
+15:05:27:445  INFO 10920 --- [main] org.reflections.Reflections              : Reflections took 30 ms to scan 1 urls, producing 3 keys and 6 values 
+15:05:27:481  INFO 10920 --- [main] org.reflections.Reflections              : Reflections took 13 ms to scan 1 urls, producing 4 keys and 9 values 
+15:05:27:492  INFO 10920 --- [main] org.reflections.Reflections              : Reflections took 8 ms to scan 1 urls, producing 3 keys and 10 values 
+15:05:27:500  WARN 10920 --- [main] org.reflections.Reflections              : given scan urls are empty. set urls in the configuration
+15:05:27:509  INFO 10920 --- [main] org.reflections.Reflections              : Reflections took 8 ms to scan 1 urls, producing 1 keys and 5 values 
+15:05:27:522  INFO 10920 --- [main] org.reflections.Reflections              : Reflections took 9 ms to scan 1 urls, producing 1 keys and 7 values 
+15:05:27:537  INFO 10920 --- [main] org.reflections.Reflections              : Reflections took 9 ms to scan 1 urls, producing 2 keys and 8 values 
+15:05:27:542  WARN 10920 --- [main] org.reflections.Reflections              : given scan urls are empty. set urls in the configuration
+15:05:27:544  INFO 10920 --- [main] com.alibaba.nacos.common.remote.client   : [492c859f-dfed-4ab3-8b9b-775e6508fa23_config-0] RpcClient init label, labels = {module=config, Vipserver-Tag=null, source=sdk, Amory-Tag=null, Location-Tag=null, taskId=0, AppName=unknown}
+15:05:27:545  INFO 10920 --- [main] com.alibaba.nacos.common.remote.client   : [492c859f-dfed-4ab3-8b9b-775e6508fa23_config-0] Register server push request handler:com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$$Lambda$463/0x00000008003f7040
+15:05:27:545  INFO 10920 --- [main] com.alibaba.nacos.common.remote.client   : [492c859f-dfed-4ab3-8b9b-775e6508fa23_config-0] Register server push request handler:com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$$Lambda$464/0x00000008003f7440
+15:05:27:547  INFO 10920 --- [main] com.alibaba.nacos.common.remote.client   : [492c859f-dfed-4ab3-8b9b-775e6508fa23_config-0] Registry connection listener to current client:com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$1
+15:05:27:548  INFO 10920 --- [main] com.alibaba.nacos.common.remote.client   : [492c859f-dfed-4ab3-8b9b-775e6508fa23_config-0] RpcClient init, ServerListFactory = com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$2
+15:05:27:566  INFO 10920 --- [main] com.alibaba.nacos.common.remote.client   : [492c859f-dfed-4ab3-8b9b-775e6508fa23_config-0] Try to connect to server on start up, server: {serverIp = '127.0.0.1', server main port = 8848}
+15:05:32:286  INFO 10920 --- [main] com.alibaba.nacos.common.remote.client   : [492c859f-dfed-4ab3-8b9b-775e6508fa23_config-0] Success to connect to server [127.0.0.1:8848] on start up, connectionId = 1755241532089_172.17.0.1_55286
+15:05:32:287  INFO 10920 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [492c859f-dfed-4ab3-8b9b-775e6508fa23_config-0] Notify connected event to listeners.
+15:05:32:287  INFO 10920 --- [main] com.alibaba.nacos.common.remote.client   : [492c859f-dfed-4ab3-8b9b-775e6508fa23_config-0] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
+15:05:32:288  INFO 10920 --- [main] com.alibaba.nacos.common.remote.client   : [492c859f-dfed-4ab3-8b9b-775e6508fa23_config-0] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$478/0x00000008004f8440
+15:05:32:343  WARN 10920 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[trade-service] & group[DEFAULT_GROUP]
+15:05:32:350  WARN 10920 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[trade-service.properties] & group[DEFAULT_GROUP]
+15:05:32:357  WARN 10920 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[trade-service-dev.properties] & group[DEFAULT_GROUP]
+15:05:32:358  INFO 10920 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-trade-service-dev.properties,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-trade-service.properties,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-trade-service,DEFAULT_GROUP'}]
+15:05:32:377  INFO 10920 --- [main] com.hmall.trade.TradeApplication         : The following 1 profile is active: "dev"
+15:05:33:075  INFO 10920 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+15:05:33:077  INFO 10920 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+15:05:33:107  INFO 10920 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14 ms. Found 0 Redis repository interfaces.
+15:05:33:316  INFO 10920 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=800e651c-b1c9-388d-9b65-b5331943fdb4
+15:05:33:641  INFO 10920 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8086 (http)
+15:05:33:649  INFO 10920 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+15:05:33:649  INFO 10920 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.75]
+15:05:33:813  INFO 10920 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+15:05:33:814  INFO 10920 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1421 ms
+15:05:33:962  INFO 10920 --- [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'item-service' URL not provided. Will try picking an instance via load-balancing.
+15:05:35:062  INFO 10920 --- [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'cart-service' URL not provided. Will try picking an instance via load-balancing.
+15:05:37:752  INFO 10920 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+15:05:37:777  INFO 10920 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+15:05:40:518  INFO 10920 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+15:05:40:823  INFO 10920 --- [main] com.alibaba.nacos.common.remote.client   : [RpcClientFactory] create a new rpc client of 758d09af-d77d-4cbe-85ca-e2e414e48933
+15:05:40:824  INFO 10920 --- [main] com.alibaba.nacos.common.remote.client   : [758d09af-d77d-4cbe-85ca-e2e414e48933] RpcClient init label, labels = {module=naming, source=sdk}
+15:05:40:826  INFO 10920 --- [main] com.alibaba.nacos.common.remote.client   : [758d09af-d77d-4cbe-85ca-e2e414e48933] RpcClient init, ServerListFactory = com.alibaba.nacos.client.naming.core.ServerListManager
+15:05:40:826  INFO 10920 --- [main] com.alibaba.nacos.common.remote.client   : [758d09af-d77d-4cbe-85ca-e2e414e48933] Registry connection listener to current client:com.alibaba.nacos.client.naming.remote.gprc.redo.NamingGrpcRedoService
+15:05:40:826  INFO 10920 --- [main] com.alibaba.nacos.common.remote.client   : [758d09af-d77d-4cbe-85ca-e2e414e48933] Register server push request handler:com.alibaba.nacos.client.naming.remote.gprc.NamingPushRequestHandler
+15:05:40:827  INFO 10920 --- [main] com.alibaba.nacos.common.remote.client   : [758d09af-d77d-4cbe-85ca-e2e414e48933] Try to connect to server on start up, server: {serverIp = 'localhost', server main port = 8848}
+15:05:40:952  INFO 10920 --- [main] com.alibaba.nacos.common.remote.client   : [758d09af-d77d-4cbe-85ca-e2e414e48933] Success to connect to server [localhost:8848] on start up, connectionId = 1755241540836_172.17.0.1_60484
+15:05:40:952  INFO 10920 --- [main] com.alibaba.nacos.common.remote.client   : [758d09af-d77d-4cbe-85ca-e2e414e48933] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
+15:05:40:953  INFO 10920 --- [main] com.alibaba.nacos.common.remote.client   : [758d09af-d77d-4cbe-85ca-e2e414e48933] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$478/0x00000008004f8440
+15:05:40:952  INFO 10920 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [758d09af-d77d-4cbe-85ca-e2e414e48933] Notify connected event to listeners.
+15:05:40:991  INFO 10920 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8086 (http) with context path ''
+15:05:41:001  INFO 10920 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP trade-service 192.168.138.1:8086 register finished
+15:05:41:486  INFO 10920 --- [nacos-grpc-client-executor-6] com.alibaba.nacos.common.remote.client   : [758d09af-d77d-4cbe-85ca-e2e414e48933] Receive server push request, request = NotifySubscriberRequest, requestId = 44
+15:05:41:488  INFO 10920 --- [nacos-grpc-client-executor-6] com.alibaba.nacos.common.remote.client   : [758d09af-d77d-4cbe-85ca-e2e414e48933] Ack server push request, request = NotifySubscriberRequest, requestId = 44
+15:05:43:292  INFO 10920 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+15:05:43:293  INFO 10920 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+15:05:43:295  INFO 10920 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+15:05:43:312  INFO 10920 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+15:05:43:369  INFO 10920 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+15:05:43:408  INFO 10920 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#68fc636a:0/SimpleConnection@42a89cef [delegate=amqp://itheima@127.0.0.1:5672//hmall, localPort= 59026]
+15:05:43:484  INFO 10920 --- [main] com.hmall.trade.TradeApplication         : Started TradeApplication in 22.141 seconds (JVM running for 23.723)
+15:05:43:490  INFO 10920 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=trade-service.properties, group=DEFAULT_GROUP
+15:05:43:492  INFO 10920 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=trade-service, group=DEFAULT_GROUP
+15:05:43:492  INFO 10920 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=trade-service-dev.properties, group=DEFAULT_GROUP
+15:06:19:042  INFO 10920 --- [http-nio-8086-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+15:06:19:042  INFO 10920 --- [http-nio-8086-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+15:06:19:042  INFO 10920 --- [http-nio-8086-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+15:06:19:116  INFO 10920 --- [http-nio-8086-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+15:06:20:019  INFO 10920 --- [http-nio-8086-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+15:06:20:351 DEBUG 10920 --- [http-nio-8086-exec-1] c.hmall.trade.mapper.OrderMapper.insert  : ==>  Preparing: INSERT INTO `order` ( id, total_fee, payment_type, user_id, status ) VALUES ( ?, ?, ?, ?, ? )
+15:06:20:373 DEBUG 10920 --- [http-nio-8086-exec-1] c.hmall.trade.mapper.OrderMapper.insert  : ==> Parameters: 1956251091843424257(Long), 379500(Integer), 3(Integer), 1(Long), 1(Integer)
+15:06:20:453 DEBUG 10920 --- [http-nio-8086-exec-1] c.hmall.trade.mapper.OrderMapper.insert  : <==    Updates: 1
+15:06:20:464 DEBUG 10920 --- [http-nio-8086-exec-1] c.h.t.mapper.OrderDetailMapper.insert    : ==>  Preparing: INSERT INTO order_detail ( order_id, item_id, num, name, spec, price, image ) VALUES ( ?, ?, ?, ?, ?, ?, ? )
+15:06:20:464 DEBUG 10920 --- [http-nio-8086-exec-1] c.h.t.mapper.OrderDetailMapper.insert    : ==> Parameters: 1956251091843424257(Long), 8533120(Long), 1(Integer), 海尔 （Haier ）LQ65H31 65英寸 4K曲面人工智能全面屏超高清LED液晶电视(String), {}(String), 379500(Integer), https://m.360buyimg.com/mobilecms/s720x720_jfs/t1/2851/14/13998/101463/5bd9723cE81b2c299/1bfdf2d1628648e4.jpg!q70.jpg.webp(String)
+15:06:20:698  INFO 10920 --- [nacos-grpc-client-executor-17] com.alibaba.nacos.common.remote.client   : [758d09af-d77d-4cbe-85ca-e2e414e48933] Receive server push request, request = NotifySubscriberRequest, requestId = 52
+15:06:20:698  INFO 10920 --- [nacos-grpc-client-executor-17] com.alibaba.nacos.common.remote.client   : [758d09af-d77d-4cbe-85ca-e2e414e48933] Ack server push request, request = NotifySubscriberRequest, requestId = 52
+15:06:21:097  INFO 10920 --- [nacos-grpc-client-executor-18] com.alibaba.nacos.common.remote.client   : [758d09af-d77d-4cbe-85ca-e2e414e48933] Receive server push request, request = NotifySubscriberRequest, requestId = 53
+15:06:21:097  INFO 10920 --- [nacos-grpc-client-executor-18] com.alibaba.nacos.common.remote.client   : [758d09af-d77d-4cbe-85ca-e2e414e48933] Ack server push request, request = NotifySubscriberRequest, requestId = 53
+15:06:32:035 DEBUG 10920 --- [http-nio-8086-exec-4] c.hmall.trade.mapper.OrderMapper.insert  : ==>  Preparing: INSERT INTO `order` ( id, total_fee, payment_type, user_id, status ) VALUES ( ?, ?, ?, ?, ? )
+15:06:32:036 DEBUG 10920 --- [http-nio-8086-exec-4] c.hmall.trade.mapper.OrderMapper.insert  : ==> Parameters: 1956251140879032321(Long), 379500(Integer), 3(Integer), 1(Long), 1(Integer)
+15:06:32:100 DEBUG 10920 --- [http-nio-8086-exec-4] c.hmall.trade.mapper.OrderMapper.insert  : <==    Updates: 1
+15:06:32:102 DEBUG 10920 --- [http-nio-8086-exec-4] c.h.t.mapper.OrderDetailMapper.insert    : ==>  Preparing: INSERT INTO order_detail ( order_id, item_id, num, name, spec, price, image ) VALUES ( ?, ?, ?, ?, ?, ?, ? )
+15:06:32:102 DEBUG 10920 --- [http-nio-8086-exec-4] c.h.t.mapper.OrderDetailMapper.insert    : ==> Parameters: 1956251140879032321(Long), 8533120(Long), 1(Integer), 海尔 （Haier ）LQ65H31 65英寸 4K曲面人工智能全面屏超高清LED液晶电视(String), {}(String), 379500(Integer), https://m.360buyimg.com/mobilecms/s720x720_jfs/t1/2851/14/13998/101463/5bd9723cE81b2c299/1bfdf2d1628648e4.jpg!q70.jpg.webp(String)
+15:06:32:505 DEBUG 10920 --- [http-nio-8086-exec-3] c.h.trade.mapper.OrderMapper.selectById  : ==>  Preparing: SELECT id,total_fee,payment_type,user_id,status,create_time,pay_time,consign_time,end_time,close_time,comment_time,update_time FROM `order` WHERE id=?
+15:06:32:505 DEBUG 10920 --- [http-nio-8086-exec-3] c.h.trade.mapper.OrderMapper.selectById  : ==> Parameters: 1956251140879032321(Long)
+15:06:32:556 DEBUG 10920 --- [http-nio-8086-exec-3] c.h.trade.mapper.OrderMapper.selectById  : <==      Total: 1
+15:06:42:408 DEBUG 10920 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.h.trade.mapper.OrderMapper.selectById  : ==>  Preparing: SELECT id,total_fee,payment_type,user_id,status,create_time,pay_time,consign_time,end_time,close_time,comment_time,update_time FROM `order` WHERE id=?
+15:06:42:409 DEBUG 10920 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.h.trade.mapper.OrderMapper.selectById  : ==> Parameters: 1956251140879032321(Long)
+15:06:42:443 DEBUG 10920 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.h.trade.mapper.OrderMapper.selectById  : <==      Total: 1
+15:06:42:451 DEBUG 10920 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.h.trade.mapper.OrderMapper.updateById  : ==>  Preparing: UPDATE `order` SET status=?, pay_time=? WHERE id=?
+15:06:42:452 DEBUG 10920 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.h.trade.mapper.OrderMapper.updateById  : ==> Parameters: 2(Integer), 2025-08-15T15:06:42.443372800(LocalDateTime), 1956251140879032321(Long)
+15:06:42:524 DEBUG 10920 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.h.trade.mapper.OrderMapper.updateById  : <==    Updates: 1
+15:06:42:541 DEBUG 10920 --- [http-nio-8086-exec-2] c.h.trade.mapper.OrderMapper.selectById  : ==>  Preparing: SELECT id,total_fee,payment_type,user_id,status,create_time,pay_time,consign_time,end_time,close_time,comment_time,update_time FROM `order` WHERE id=?
+15:06:42:542 DEBUG 10920 --- [http-nio-8086-exec-2] c.h.trade.mapper.OrderMapper.selectById  : ==> Parameters: 1956251140879032321(Long)
+15:06:42:596 DEBUG 10920 --- [http-nio-8086-exec-2] c.h.trade.mapper.OrderMapper.selectById  : <==      Total: 1
+15:17:55:412  WARN 10920 --- [Thread-1] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+15:17:55:413  WARN 10920 --- [Thread-5] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+15:17:55:414  WARN 10920 --- [Thread-5] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+15:17:55:415  WARN 10920 --- [Thread-1] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+15:17:55:424  INFO 10920 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+15:17:55:761  INFO 10920 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+15:17:56:042  INFO 10920 --- [nacos-grpc-client-executor-168] com.alibaba.nacos.common.remote.client   : [758d09af-d77d-4cbe-85ca-e2e414e48933] Receive server push request, request = NotifySubscriberRequest, requestId = 56
+15:17:56:045  INFO 10920 --- [nacos-grpc-client-executor-168] com.alibaba.nacos.common.remote.client   : [758d09af-d77d-4cbe-85ca-e2e414e48933] Ack server push request, request = NotifySubscriberRequest, requestId = 56
+15:17:56:050  INFO 10920 --- [nacos-grpc-client-executor-169] com.alibaba.nacos.common.remote.client   : [758d09af-d77d-4cbe-85ca-e2e414e48933] Receive server push request, request = NotifySubscriberRequest, requestId = 57
+15:17:56:051  INFO 10920 --- [nacos-grpc-client-executor-169] com.alibaba.nacos.common.remote.client   : [758d09af-d77d-4cbe-85ca-e2e414e48933] Ack server push request, request = NotifySubscriberRequest, requestId = 57
+15:17:56:579  INFO 10920 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+15:17:56:582  INFO 10920 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+15:17:56:909  INFO 10920 --- [SpringApplicationShutdownHook] com.alibaba.nacos.common.remote.client   : Shutdown rpc client, set status to shutdown
+15:17:56:909  INFO 10920 --- [SpringApplicationShutdownHook] com.alibaba.nacos.common.remote.client   : Shutdown client event executor java.util.concurrent.ScheduledThreadPoolExecutor@6ba0bbc8[Running, pool size = 2, active threads = 2, queued tasks = 0, completed tasks = 0]
+15:17:56:909  INFO 10920 --- [SpringApplicationShutdownHook] com.alibaba.nacos.common.remote.client   : Close current connection 1755241540836_172.17.0.1_60484
+15:17:56:912  INFO 10920 --- [nacos-grpc-client-executor-172] c.a.n.c.remote.client.grpc.GrpcClient    : [1755241540836_172.17.0.1_60484]Ignore complete event,isRunning:false,isAbandon=false
+15:17:56:914  INFO 10920 --- [SpringApplicationShutdownHook] c.a.n.c.remote.client.grpc.GrpcClient    : Shutdown grpc executor java.util.concurrent.ThreadPoolExecutor@4d38293a[Running, pool size = 7, active threads = 0, queued tasks = 0, completed tasks = 173]
+15:17:56:917  INFO 10920 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+15:17:58:095  INFO 10920 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+15:17:58:099  INFO 10920 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is already stopped
+15:18:28:961  INFO 55960 --- [main] com.alibaba.nacos.common.remote.client   : [RpcClientFactory] create a new rpc client of 5c7fb7a2-1c8f-4f21-a5e5-6f81e8441f4d_config-0
+15:18:29:026  INFO 55960 --- [main] org.reflections.Reflections              : Reflections took 33 ms to scan 1 urls, producing 3 keys and 6 values 
+15:18:29:065  INFO 55960 --- [main] org.reflections.Reflections              : Reflections took 12 ms to scan 1 urls, producing 4 keys and 9 values 
+15:18:29:077  INFO 55960 --- [main] org.reflections.Reflections              : Reflections took 8 ms to scan 1 urls, producing 3 keys and 10 values 
+15:18:29:085  WARN 55960 --- [main] org.reflections.Reflections              : given scan urls are empty. set urls in the configuration
+15:18:29:094  INFO 55960 --- [main] org.reflections.Reflections              : Reflections took 9 ms to scan 1 urls, producing 1 keys and 5 values 
+15:18:29:110  INFO 55960 --- [main] org.reflections.Reflections              : Reflections took 10 ms to scan 1 urls, producing 1 keys and 7 values 
+15:18:29:124  INFO 55960 --- [main] org.reflections.Reflections              : Reflections took 7 ms to scan 1 urls, producing 2 keys and 8 values 
+15:18:29:129  WARN 55960 --- [main] org.reflections.Reflections              : given scan urls are empty. set urls in the configuration
+15:18:29:130  INFO 55960 --- [main] com.alibaba.nacos.common.remote.client   : [5c7fb7a2-1c8f-4f21-a5e5-6f81e8441f4d_config-0] RpcClient init label, labels = {module=config, Vipserver-Tag=null, source=sdk, Amory-Tag=null, Location-Tag=null, taskId=0, AppName=unknown}
+15:18:29:131  INFO 55960 --- [main] com.alibaba.nacos.common.remote.client   : [5c7fb7a2-1c8f-4f21-a5e5-6f81e8441f4d_config-0] Register server push request handler:com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$$Lambda$463/0x00000008003f7040
+15:18:29:132  INFO 55960 --- [main] com.alibaba.nacos.common.remote.client   : [5c7fb7a2-1c8f-4f21-a5e5-6f81e8441f4d_config-0] Register server push request handler:com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$$Lambda$464/0x00000008003f7440
+15:18:29:133  INFO 55960 --- [main] com.alibaba.nacos.common.remote.client   : [5c7fb7a2-1c8f-4f21-a5e5-6f81e8441f4d_config-0] Registry connection listener to current client:com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$1
+15:18:29:135  INFO 55960 --- [main] com.alibaba.nacos.common.remote.client   : [5c7fb7a2-1c8f-4f21-a5e5-6f81e8441f4d_config-0] RpcClient init, ServerListFactory = com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$2
+15:18:29:151  INFO 55960 --- [main] com.alibaba.nacos.common.remote.client   : [5c7fb7a2-1c8f-4f21-a5e5-6f81e8441f4d_config-0] Try to connect to server on start up, server: {serverIp = '127.0.0.1', server main port = 8848}
+15:18:33:204  INFO 55960 --- [main] com.alibaba.nacos.common.remote.client   : [5c7fb7a2-1c8f-4f21-a5e5-6f81e8441f4d_config-0] Success to connect to server [127.0.0.1:8848] on start up, connectionId = 1755242313000_172.17.0.1_60270
+15:18:33:204  INFO 55960 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [5c7fb7a2-1c8f-4f21-a5e5-6f81e8441f4d_config-0] Notify connected event to listeners.
+15:18:33:206  INFO 55960 --- [main] com.alibaba.nacos.common.remote.client   : [5c7fb7a2-1c8f-4f21-a5e5-6f81e8441f4d_config-0] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
+15:18:33:206  INFO 55960 --- [main] com.alibaba.nacos.common.remote.client   : [5c7fb7a2-1c8f-4f21-a5e5-6f81e8441f4d_config-0] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$478/0x00000008004f8440
+15:18:33:258  WARN 55960 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[trade-service] & group[DEFAULT_GROUP]
+15:18:33:263  WARN 55960 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[trade-service.properties] & group[DEFAULT_GROUP]
+15:18:33:269  WARN 55960 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[trade-service-dev.properties] & group[DEFAULT_GROUP]
+15:18:33:270  INFO 55960 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-trade-service-dev.properties,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-trade-service.properties,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-trade-service,DEFAULT_GROUP'}]
+15:18:33:281  INFO 55960 --- [main] com.hmall.trade.TradeApplication         : The following 1 profile is active: "dev"
+15:18:33:974  INFO 55960 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+15:18:33:976  INFO 55960 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+15:18:34:002  INFO 55960 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 0 Redis repository interfaces.
+15:18:34:176  INFO 55960 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=800e651c-b1c9-388d-9b65-b5331943fdb4
+15:18:34:464  INFO 55960 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8086 (http)
+15:18:34:472  INFO 55960 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+15:18:34:472  INFO 55960 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.75]
+15:18:34:618  INFO 55960 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+15:18:34:618  INFO 55960 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1325 ms
+15:18:34:751  INFO 55960 --- [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'item-service' URL not provided. Will try picking an instance via load-balancing.
+15:18:35:770  INFO 55960 --- [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'cart-service' URL not provided. Will try picking an instance via load-balancing.
+15:18:38:358  INFO 55960 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+15:18:38:384  INFO 55960 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+15:18:41:060  INFO 55960 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+15:18:41:205  INFO 55960 --- [main] com.alibaba.nacos.common.remote.client   : [RpcClientFactory] create a new rpc client of 0fea5909-7c17-49ae-9e06-fb686c5b27b8
+15:18:41:205  INFO 55960 --- [main] com.alibaba.nacos.common.remote.client   : [0fea5909-7c17-49ae-9e06-fb686c5b27b8] RpcClient init label, labels = {module=naming, source=sdk}
+15:18:41:207  INFO 55960 --- [main] com.alibaba.nacos.common.remote.client   : [0fea5909-7c17-49ae-9e06-fb686c5b27b8] RpcClient init, ServerListFactory = com.alibaba.nacos.client.naming.core.ServerListManager
+15:18:41:207  INFO 55960 --- [main] com.alibaba.nacos.common.remote.client   : [0fea5909-7c17-49ae-9e06-fb686c5b27b8] Registry connection listener to current client:com.alibaba.nacos.client.naming.remote.gprc.redo.NamingGrpcRedoService
+15:18:41:207  INFO 55960 --- [main] com.alibaba.nacos.common.remote.client   : [0fea5909-7c17-49ae-9e06-fb686c5b27b8] Register server push request handler:com.alibaba.nacos.client.naming.remote.gprc.NamingPushRequestHandler
+15:18:41:208  INFO 55960 --- [main] com.alibaba.nacos.common.remote.client   : [0fea5909-7c17-49ae-9e06-fb686c5b27b8] Try to connect to server on start up, server: {serverIp = 'localhost', server main port = 8848}
+15:18:41:337  INFO 55960 --- [main] com.alibaba.nacos.common.remote.client   : [0fea5909-7c17-49ae-9e06-fb686c5b27b8] Success to connect to server [localhost:8848] on start up, connectionId = 1755242321217_172.17.0.1_45358
+15:18:41:337  INFO 55960 --- [main] com.alibaba.nacos.common.remote.client   : [0fea5909-7c17-49ae-9e06-fb686c5b27b8] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
+15:18:41:337  INFO 55960 --- [main] com.alibaba.nacos.common.remote.client   : [0fea5909-7c17-49ae-9e06-fb686c5b27b8] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$478/0x00000008004f8440
+15:18:41:337  INFO 55960 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [0fea5909-7c17-49ae-9e06-fb686c5b27b8] Notify connected event to listeners.
+15:18:41:373  INFO 55960 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8086 (http) with context path ''
+15:18:41:382  INFO 55960 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP trade-service 192.168.138.1:8086 register finished
+15:18:41:919  INFO 55960 --- [nacos-grpc-client-executor-6] com.alibaba.nacos.common.remote.client   : [0fea5909-7c17-49ae-9e06-fb686c5b27b8] Receive server push request, request = NotifySubscriberRequest, requestId = 66
+15:18:41:921  INFO 55960 --- [nacos-grpc-client-executor-6] com.alibaba.nacos.common.remote.client   : [0fea5909-7c17-49ae-9e06-fb686c5b27b8] Ack server push request, request = NotifySubscriberRequest, requestId = 66
+15:18:43:503  INFO 55960 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+15:18:43:504  INFO 55960 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+15:18:43:506  INFO 55960 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+15:18:43:523  INFO 55960 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+15:18:43:579  INFO 55960 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+15:18:43:612  INFO 55960 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#4965454c:0/SimpleConnection@5ae22651 [delegate=amqp://itheima@127.0.0.1:5672//hmall, localPort= 60015]
+15:18:43:665  INFO 55960 --- [main] com.hmall.trade.TradeApplication         : Started TradeApplication in 21.097 seconds (JVM running for 22.862)
+15:18:43:670  INFO 55960 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=trade-service.properties, group=DEFAULT_GROUP
+15:18:43:671  INFO 55960 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=trade-service, group=DEFAULT_GROUP
+15:18:43:671  INFO 55960 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=trade-service-dev.properties, group=DEFAULT_GROUP
+15:19:52:951  INFO 55960 --- [http-nio-8086-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+15:19:52:952  INFO 55960 --- [http-nio-8086-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+15:19:52:953  INFO 55960 --- [http-nio-8086-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+15:19:53:022  INFO 55960 --- [http-nio-8086-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+15:19:53:904  INFO 55960 --- [http-nio-8086-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+15:19:54:211 DEBUG 55960 --- [http-nio-8086-exec-1] c.hmall.trade.mapper.OrderMapper.insert  : ==>  Preparing: INSERT INTO `order` ( id, total_fee, payment_type, user_id, status ) VALUES ( ?, ?, ?, ?, ? )
+15:19:54:242 DEBUG 55960 --- [http-nio-8086-exec-1] c.hmall.trade.mapper.OrderMapper.insert  : ==> Parameters: 1956254505457537025(Long), 368800(Integer), 3(Integer), 1(Long), 1(Integer)
+15:19:54:335 DEBUG 55960 --- [http-nio-8086-exec-1] c.hmall.trade.mapper.OrderMapper.insert  : <==    Updates: 1
+15:19:54:345 DEBUG 55960 --- [http-nio-8086-exec-1] c.h.t.mapper.OrderDetailMapper.insert    : ==>  Preparing: INSERT INTO order_detail ( order_id, item_id, num, name, spec, price, image ) VALUES ( ?, ?, ?, ?, ?, ?, ? )
+15:19:54:345 DEBUG 55960 --- [http-nio-8086-exec-1] c.h.t.mapper.OrderDetailMapper.insert    : ==> Parameters: 1956254505457537025(Long), 3072507(Long), 1(Integer), 飞利浦 65POD901C/T3 65英寸 OLED曲面 三边流光溢彩金属超薄机身4K超高清智能液晶电视机（PHILIPS）(String), {"版本": "65英寸"}(String), 368800(Integer), https://m.360buyimg.com/mobilecms/s720x720_jfs/t1/5966/19/11913/209097/5bd13c30Ea76804a8/6faec86cea020dd0.jpg!q70.jpg.webp(String)
+15:19:54:637  INFO 55960 --- [nacos-grpc-client-executor-24] com.alibaba.nacos.common.remote.client   : [0fea5909-7c17-49ae-9e06-fb686c5b27b8] Receive server push request, request = NotifySubscriberRequest, requestId = 72
+15:19:54:637  INFO 55960 --- [nacos-grpc-client-executor-24] com.alibaba.nacos.common.remote.client   : [0fea5909-7c17-49ae-9e06-fb686c5b27b8] Ack server push request, request = NotifySubscriberRequest, requestId = 72
+15:19:55:038  INFO 55960 --- [nacos-grpc-client-executor-25] com.alibaba.nacos.common.remote.client   : [0fea5909-7c17-49ae-9e06-fb686c5b27b8] Receive server push request, request = NotifySubscriberRequest, requestId = 73
+15:19:55:039  INFO 55960 --- [nacos-grpc-client-executor-25] com.alibaba.nacos.common.remote.client   : [0fea5909-7c17-49ae-9e06-fb686c5b27b8] Ack server push request, request = NotifySubscriberRequest, requestId = 73
+15:19:56:983 DEBUG 55960 --- [http-nio-8086-exec-4] c.hmall.trade.mapper.OrderMapper.insert  : ==>  Preparing: INSERT INTO `order` ( id, total_fee, payment_type, user_id, status ) VALUES ( ?, ?, ?, ?, ? )
+15:19:56:987 DEBUG 55960 --- [http-nio-8086-exec-4] c.hmall.trade.mapper.OrderMapper.insert  : ==> Parameters: 1956254517088342017(Long), 368800(Integer), 3(Integer), 1(Long), 1(Integer)
+15:19:57:089 DEBUG 55960 --- [http-nio-8086-exec-4] c.hmall.trade.mapper.OrderMapper.insert  : <==    Updates: 1
+15:19:57:090 DEBUG 55960 --- [http-nio-8086-exec-4] c.h.t.mapper.OrderDetailMapper.insert    : ==>  Preparing: INSERT INTO order_detail ( order_id, item_id, num, name, spec, price, image ) VALUES ( ?, ?, ?, ?, ?, ?, ? )
+15:19:57:090 DEBUG 55960 --- [http-nio-8086-exec-4] c.h.t.mapper.OrderDetailMapper.insert    : ==> Parameters: 1956254517088342017(Long), 3072507(Long), 1(Integer), 飞利浦 65POD901C/T3 65英寸 OLED曲面 三边流光溢彩金属超薄机身4K超高清智能液晶电视机（PHILIPS）(String), {"版本": "65英寸"}(String), 368800(Integer), https://m.360buyimg.com/mobilecms/s720x720_jfs/t1/5966/19/11913/209097/5bd13c30Ea76804a8/6faec86cea020dd0.jpg!q70.jpg.webp(String)
+15:19:57:557 DEBUG 55960 --- [http-nio-8086-exec-3] c.h.trade.mapper.OrderMapper.selectById  : ==>  Preparing: SELECT id,total_fee,payment_type,user_id,status,create_time,pay_time,consign_time,end_time,close_time,comment_time,update_time FROM `order` WHERE id=?
+15:19:57:557 DEBUG 55960 --- [http-nio-8086-exec-3] c.h.trade.mapper.OrderMapper.selectById  : ==> Parameters: 1956254517088342017(Long)
+15:19:57:617 DEBUG 55960 --- [http-nio-8086-exec-3] c.h.trade.mapper.OrderMapper.selectById  : <==      Total: 1
+15:20:11:156 DEBUG 55960 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.h.trade.mapper.OrderMapper.selectById  : ==>  Preparing: SELECT id,total_fee,payment_type,user_id,status,create_time,pay_time,consign_time,end_time,close_time,comment_time,update_time FROM `order` WHERE id=?
+15:20:11:157 DEBUG 55960 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.h.trade.mapper.OrderMapper.selectById  : ==> Parameters: 1956254517088342017(Long)
+15:20:11:187 DEBUG 55960 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.h.trade.mapper.OrderMapper.selectById  : <==      Total: 1
+15:20:11:199 DEBUG 55960 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.h.trade.mapper.OrderMapper.updateById  : ==>  Preparing: UPDATE `order` SET status=?, pay_time=? WHERE id=?
+15:20:11:203 DEBUG 55960 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.h.trade.mapper.OrderMapper.updateById  : ==> Parameters: 2(Integer), 2025-08-15T15:20:11.188905900(LocalDateTime), 1956254517088342017(Long)
+15:20:11:293 DEBUG 55960 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.h.trade.mapper.OrderMapper.updateById  : <==    Updates: 1
+15:20:11:305 DEBUG 55960 --- [http-nio-8086-exec-2] c.h.trade.mapper.OrderMapper.selectById  : ==>  Preparing: SELECT id,total_fee,payment_type,user_id,status,create_time,pay_time,consign_time,end_time,close_time,comment_time,update_time FROM `order` WHERE id=?
+15:20:11:305 DEBUG 55960 --- [http-nio-8086-exec-2] c.h.trade.mapper.OrderMapper.selectById  : ==> Parameters: 1956254517088342017(Long)
+15:20:11:355 DEBUG 55960 --- [http-nio-8086-exec-2] c.h.trade.mapper.OrderMapper.selectById  : <==      Total: 1
+15:37:08:241  WARN 55960 --- [Thread-1] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+15:37:08:240  WARN 55960 --- [Thread-5] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+15:37:08:243  WARN 55960 --- [Thread-5] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+15:37:08:244  WARN 55960 --- [Thread-1] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+15:37:08:271  INFO 55960 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+15:37:08:553  INFO 55960 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+15:37:09:434  INFO 55960 --- [nacos-grpc-client-executor-252] com.alibaba.nacos.common.remote.client   : [0fea5909-7c17-49ae-9e06-fb686c5b27b8] Receive server push request, request = NotifySubscriberRequest, requestId = 77
+15:37:09:441  INFO 55960 --- [nacos-grpc-client-executor-252] com.alibaba.nacos.common.remote.client   : [0fea5909-7c17-49ae-9e06-fb686c5b27b8] Ack server push request, request = NotifySubscriberRequest, requestId = 77
+15:37:09:597  INFO 55960 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+15:37:09:601  INFO 55960 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+15:37:09:928  INFO 55960 --- [SpringApplicationShutdownHook] com.alibaba.nacos.common.remote.client   : Shutdown rpc client, set status to shutdown
+15:37:09:928  INFO 55960 --- [SpringApplicationShutdownHook] com.alibaba.nacos.common.remote.client   : Shutdown client event executor java.util.concurrent.ScheduledThreadPoolExecutor@1439580b[Running, pool size = 2, active threads = 2, queued tasks = 0, completed tasks = 0]
+15:37:09:928  INFO 55960 --- [SpringApplicationShutdownHook] com.alibaba.nacos.common.remote.client   : Close current connection 1755242321217_172.17.0.1_45358
+15:37:09:931  INFO 55960 --- [nacos-grpc-client-executor-255] c.a.n.c.remote.client.grpc.GrpcClient    : [1755242321217_172.17.0.1_45358]Ignore complete event,isRunning:false,isAbandon=false
+15:37:09:937  INFO 55960 --- [SpringApplicationShutdownHook] c.a.n.c.remote.client.grpc.GrpcClient    : Shutdown grpc executor java.util.concurrent.ThreadPoolExecutor@1f987b9d[Running, pool size = 6, active threads = 0, queued tasks = 0, completed tasks = 256]
+15:37:09:943  INFO 55960 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+15:37:10:531  INFO 55960 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+15:37:10:535  INFO 55960 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is already stopped
+15:37:22:994  INFO 42124 --- [main] com.alibaba.nacos.common.remote.client   : [RpcClientFactory] create a new rpc client of 37ab5955-60cb-455e-971d-4719c9ecac01_config-0
+15:37:23:053  INFO 42124 --- [main] org.reflections.Reflections              : Reflections took 32 ms to scan 1 urls, producing 3 keys and 6 values 
+15:37:23:082  INFO 42124 --- [main] org.reflections.Reflections              : Reflections took 9 ms to scan 1 urls, producing 4 keys and 9 values 
+15:37:23:093  INFO 42124 --- [main] org.reflections.Reflections              : Reflections took 7 ms to scan 1 urls, producing 3 keys and 10 values 
+15:37:23:098  WARN 42124 --- [main] org.reflections.Reflections              : given scan urls are empty. set urls in the configuration
+15:37:23:105  INFO 42124 --- [main] org.reflections.Reflections              : Reflections took 6 ms to scan 1 urls, producing 1 keys and 5 values 
+15:37:23:114  INFO 42124 --- [main] org.reflections.Reflections              : Reflections took 6 ms to scan 1 urls, producing 1 keys and 7 values 
+15:37:23:123  INFO 42124 --- [main] org.reflections.Reflections              : Reflections took 6 ms to scan 1 urls, producing 2 keys and 8 values 
+15:37:23:127  WARN 42124 --- [main] org.reflections.Reflections              : given scan urls are empty. set urls in the configuration
+15:37:23:128  INFO 42124 --- [main] com.alibaba.nacos.common.remote.client   : [37ab5955-60cb-455e-971d-4719c9ecac01_config-0] RpcClient init label, labels = {module=config, Vipserver-Tag=null, source=sdk, Amory-Tag=null, Location-Tag=null, taskId=0, AppName=unknown}
+15:37:23:129  INFO 42124 --- [main] com.alibaba.nacos.common.remote.client   : [37ab5955-60cb-455e-971d-4719c9ecac01_config-0] Register server push request handler:com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$$Lambda$463/0x00000008003ff840
+15:37:23:130  INFO 42124 --- [main] com.alibaba.nacos.common.remote.client   : [37ab5955-60cb-455e-971d-4719c9ecac01_config-0] Register server push request handler:com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$$Lambda$464/0x00000008003ffc40
+15:37:23:131  INFO 42124 --- [main] com.alibaba.nacos.common.remote.client   : [37ab5955-60cb-455e-971d-4719c9ecac01_config-0] Registry connection listener to current client:com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$1
+15:37:23:133  INFO 42124 --- [main] com.alibaba.nacos.common.remote.client   : [37ab5955-60cb-455e-971d-4719c9ecac01_config-0] RpcClient init, ServerListFactory = com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$2
+15:37:23:164  INFO 42124 --- [main] com.alibaba.nacos.common.remote.client   : [37ab5955-60cb-455e-971d-4719c9ecac01_config-0] Try to connect to server on start up, server: {serverIp = '127.0.0.1', server main port = 8848}
+15:37:27:950  INFO 42124 --- [main] com.alibaba.nacos.common.remote.client   : [37ab5955-60cb-455e-971d-4719c9ecac01_config-0] Success to connect to server [127.0.0.1:8848] on start up, connectionId = 1755243447702_172.17.0.1_42182
+15:37:27:951  INFO 42124 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [37ab5955-60cb-455e-971d-4719c9ecac01_config-0] Notify connected event to listeners.
+15:37:27:952  INFO 42124 --- [main] com.alibaba.nacos.common.remote.client   : [37ab5955-60cb-455e-971d-4719c9ecac01_config-0] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
+15:37:27:953  INFO 42124 --- [main] com.alibaba.nacos.common.remote.client   : [37ab5955-60cb-455e-971d-4719c9ecac01_config-0] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$478/0x00000008004fe840
+15:37:28:046  WARN 42124 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[trade-service] & group[DEFAULT_GROUP]
+15:37:28:055  WARN 42124 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[trade-service.properties] & group[DEFAULT_GROUP]
+15:37:28:063  WARN 42124 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[trade-service-dev.properties] & group[DEFAULT_GROUP]
+15:37:28:064  INFO 42124 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-trade-service-dev.properties,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-trade-service.properties,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-trade-service,DEFAULT_GROUP'}]
+15:37:28:087  INFO 42124 --- [main] com.hmall.trade.TradeApplication         : The following 1 profile is active: "dev"
+15:37:28:986  INFO 42124 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+15:37:28:988  INFO 42124 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+15:37:29:013  INFO 42124 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
+15:37:29:211  INFO 42124 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=e14d8af3-9367-308e-b89e-ea9e963dfa84
+15:37:29:613  INFO 42124 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8086 (http)
+15:37:29:626  INFO 42124 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+15:37:29:626  INFO 42124 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.75]
+15:37:29:838  INFO 42124 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+15:37:29:838  INFO 42124 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1729 ms
+15:37:30:049  INFO 42124 --- [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'item-service' URL not provided. Will try picking an instance via load-balancing.
+15:37:31:386  INFO 42124 --- [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'cart-service' URL not provided. Will try picking an instance via load-balancing.
+15:37:34:215  INFO 42124 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+15:37:34:234  INFO 42124 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+15:37:37:018  INFO 42124 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+15:37:37:182  INFO 42124 --- [main] com.alibaba.nacos.common.remote.client   : [RpcClientFactory] create a new rpc client of 654e05e2-600d-4b50-bf13-2896549a632e
+15:37:37:182  INFO 42124 --- [main] com.alibaba.nacos.common.remote.client   : [654e05e2-600d-4b50-bf13-2896549a632e] RpcClient init label, labels = {module=naming, source=sdk}
+15:37:37:184  INFO 42124 --- [main] com.alibaba.nacos.common.remote.client   : [654e05e2-600d-4b50-bf13-2896549a632e] RpcClient init, ServerListFactory = com.alibaba.nacos.client.naming.core.ServerListManager
+15:37:37:184  INFO 42124 --- [main] com.alibaba.nacos.common.remote.client   : [654e05e2-600d-4b50-bf13-2896549a632e] Registry connection listener to current client:com.alibaba.nacos.client.naming.remote.gprc.redo.NamingGrpcRedoService
+15:37:37:184  INFO 42124 --- [main] com.alibaba.nacos.common.remote.client   : [654e05e2-600d-4b50-bf13-2896549a632e] Register server push request handler:com.alibaba.nacos.client.naming.remote.gprc.NamingPushRequestHandler
+15:37:37:184  INFO 42124 --- [main] com.alibaba.nacos.common.remote.client   : [654e05e2-600d-4b50-bf13-2896549a632e] Try to connect to server on start up, server: {serverIp = 'localhost', server main port = 8848}
+15:37:37:302  INFO 42124 --- [main] com.alibaba.nacos.common.remote.client   : [654e05e2-600d-4b50-bf13-2896549a632e] Success to connect to server [localhost:8848] on start up, connectionId = 1755243457192_172.17.0.1_41250
+15:37:37:302  INFO 42124 --- [main] com.alibaba.nacos.common.remote.client   : [654e05e2-600d-4b50-bf13-2896549a632e] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
+15:37:37:302  INFO 42124 --- [main] com.alibaba.nacos.common.remote.client   : [654e05e2-600d-4b50-bf13-2896549a632e] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$478/0x00000008004fe840
+15:37:37:302  INFO 42124 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [654e05e2-600d-4b50-bf13-2896549a632e] Notify connected event to listeners.
+15:37:37:342  INFO 42124 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8086 (http) with context path ''
+15:37:37:352  INFO 42124 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP trade-service 192.168.138.1:8086 register finished
+15:37:37:888  INFO 42124 --- [nacos-grpc-client-executor-7] com.alibaba.nacos.common.remote.client   : [654e05e2-600d-4b50-bf13-2896549a632e] Receive server push request, request = NotifySubscriberRequest, requestId = 86
+15:37:37:891  INFO 42124 --- [nacos-grpc-client-executor-7] com.alibaba.nacos.common.remote.client   : [654e05e2-600d-4b50-bf13-2896549a632e] Ack server push request, request = NotifySubscriberRequest, requestId = 86
+15:37:39:613  INFO 42124 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+15:37:39:613  INFO 42124 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+15:37:39:615  INFO 42124 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+15:37:39:634  INFO 42124 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+15:37:39:689  INFO 42124 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+15:37:39:723  INFO 42124 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#1e4a4ed5:0/SimpleConnection@464017f5 [delegate=amqp://itheima@127.0.0.1:5672//hmall, localPort= 61612]
+15:37:39:784  INFO 42124 --- [main] com.hmall.trade.TradeApplication         : Started TradeApplication in 22.696 seconds (JVM running for 24.275)
+15:37:39:790  INFO 42124 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=trade-service.properties, group=DEFAULT_GROUP
+15:37:39:791  INFO 42124 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=trade-service, group=DEFAULT_GROUP
+15:37:39:791  INFO 42124 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=trade-service-dev.properties, group=DEFAULT_GROUP
+15:38:10:996  INFO 42124 --- [http-nio-8086-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+15:38:10:997  INFO 42124 --- [http-nio-8086-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+15:38:10:998  INFO 42124 --- [http-nio-8086-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+15:38:11:083  INFO 42124 --- [http-nio-8086-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+15:38:11:942  INFO 42124 --- [http-nio-8086-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+15:38:12:289 DEBUG 42124 --- [http-nio-8086-exec-1] c.hmall.trade.mapper.OrderMapper.insert  : ==>  Preparing: INSERT INTO `order` ( id, total_fee, payment_type, user_id, status ) VALUES ( ?, ?, ?, ?, ? )
+15:38:12:321 DEBUG 42124 --- [http-nio-8086-exec-1] c.hmall.trade.mapper.OrderMapper.insert  : ==> Parameters: 1956259111084355585(Long), 13700(Integer), 3(Integer), 1(Long), 1(Integer)
+15:38:12:401 DEBUG 42124 --- [http-nio-8086-exec-1] c.hmall.trade.mapper.OrderMapper.insert  : <==    Updates: 1
+15:38:12:411 DEBUG 42124 --- [http-nio-8086-exec-1] c.h.t.mapper.OrderDetailMapper.insert    : ==>  Preparing: INSERT INTO order_detail ( order_id, item_id, num, name, spec, price, image ) VALUES ( ?, ?, ?, ?, ?, ?, ? )
+15:38:12:416 DEBUG 42124 --- [http-nio-8086-exec-1] c.h.t.mapper.OrderDetailMapper.insert    : ==> Parameters: 1956259111084355585(Long), 100001511821(Long), 1(Integer), HMDIME 牛仔背带裤女2018秋冬新品 韩版学院风潮流百搭弹力修身补丁学生吊带长裤女 AXNZ369 深蓝 30(String), {"颜色": "蓝色", "尺码": "30"}(String), 13700(Integer), https://m.360buyimg.com/mobilecms/s720x720_jfs/t30892/263/313055374/557791/c98e9abc/5bef811aN036f7c3b.jpg!q70.jpg.webp(String)
+15:38:12:631  INFO 42124 --- [nacos-grpc-client-executor-17] com.alibaba.nacos.common.remote.client   : [654e05e2-600d-4b50-bf13-2896549a632e] Receive server push request, request = NotifySubscriberRequest, requestId = 95
+15:38:12:631  INFO 42124 --- [nacos-grpc-client-executor-17] com.alibaba.nacos.common.remote.client   : [654e05e2-600d-4b50-bf13-2896549a632e] Ack server push request, request = NotifySubscriberRequest, requestId = 95
+15:38:13:031  INFO 42124 --- [nacos-grpc-client-executor-18] com.alibaba.nacos.common.remote.client   : [654e05e2-600d-4b50-bf13-2896549a632e] Receive server push request, request = NotifySubscriberRequest, requestId = 96
+15:38:13:031  INFO 42124 --- [nacos-grpc-client-executor-18] com.alibaba.nacos.common.remote.client   : [654e05e2-600d-4b50-bf13-2896549a632e] Ack server push request, request = NotifySubscriberRequest, requestId = 96
+15:38:14:924 DEBUG 42124 --- [http-nio-8086-exec-5] c.hmall.trade.mapper.OrderMapper.insert  : ==>  Preparing: INSERT INTO `order` ( id, total_fee, payment_type, user_id, status ) VALUES ( ?, ?, ?, ?, ? )
+15:38:14:924 DEBUG 42124 --- [http-nio-8086-exec-5] c.hmall.trade.mapper.OrderMapper.insert  : ==> Parameters: 1956259122165706753(Long), 13700(Integer), 3(Integer), 1(Long), 1(Integer)
+15:38:14:988 DEBUG 42124 --- [http-nio-8086-exec-5] c.hmall.trade.mapper.OrderMapper.insert  : <==    Updates: 1
+15:38:14:988 DEBUG 42124 --- [http-nio-8086-exec-5] c.h.t.mapper.OrderDetailMapper.insert    : ==>  Preparing: INSERT INTO order_detail ( order_id, item_id, num, name, spec, price, image ) VALUES ( ?, ?, ?, ?, ?, ?, ? )
+15:38:14:998 DEBUG 42124 --- [http-nio-8086-exec-5] c.h.t.mapper.OrderDetailMapper.insert    : ==> Parameters: 1956259122165706753(Long), 100001511821(Long), 1(Integer), HMDIME 牛仔背带裤女2018秋冬新品 韩版学院风潮流百搭弹力修身补丁学生吊带长裤女 AXNZ369 深蓝 30(String), {"颜色": "蓝色", "尺码": "30"}(String), 13700(Integer), https://m.360buyimg.com/mobilecms/s720x720_jfs/t30892/263/313055374/557791/c98e9abc/5bef811aN036f7c3b.jpg!q70.jpg.webp(String)
+15:38:15:434 DEBUG 42124 --- [http-nio-8086-exec-7] c.h.trade.mapper.OrderMapper.selectById  : ==>  Preparing: SELECT id,total_fee,payment_type,user_id,status,create_time,pay_time,consign_time,end_time,close_time,comment_time,update_time FROM `order` WHERE id=?
+15:38:15:435 DEBUG 42124 --- [http-nio-8086-exec-7] c.h.trade.mapper.OrderMapper.selectById  : ==> Parameters: 1956259122165706753(Long)
+15:38:15:481 DEBUG 42124 --- [http-nio-8086-exec-7] c.h.trade.mapper.OrderMapper.selectById  : <==      Total: 1
+15:38:18:818 DEBUG 42124 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.h.trade.mapper.OrderMapper.selectById  : ==>  Preparing: SELECT id,total_fee,payment_type,user_id,status,create_time,pay_time,consign_time,end_time,close_time,comment_time,update_time FROM `order` WHERE id=?
+15:38:18:819 DEBUG 42124 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.h.trade.mapper.OrderMapper.selectById  : ==> Parameters: 1956259122165706753(Long)
+15:38:18:851 DEBUG 42124 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.h.trade.mapper.OrderMapper.selectById  : <==      Total: 1
+15:38:18:863 DEBUG 42124 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.h.trade.mapper.OrderMapper.updateById  : ==>  Preparing: UPDATE `order` SET status=?, pay_time=? WHERE id=?
+15:38:18:868 DEBUG 42124 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.h.trade.mapper.OrderMapper.updateById  : ==> Parameters: 2(Integer), 2025-08-15T15:38:18.853213(LocalDateTime), 1956259122165706753(Long)
+15:38:18:943 DEBUG 42124 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.h.trade.mapper.OrderMapper.updateById  : <==    Updates: 1
+15:38:18:953 DEBUG 42124 --- [http-nio-8086-exec-9] c.h.trade.mapper.OrderMapper.selectById  : ==>  Preparing: SELECT id,total_fee,payment_type,user_id,status,create_time,pay_time,consign_time,end_time,close_time,comment_time,update_time FROM `order` WHERE id=?
+15:38:18:953 DEBUG 42124 --- [http-nio-8086-exec-9] c.h.trade.mapper.OrderMapper.selectById  : ==> Parameters: 1956259122165706753(Long)
+15:38:18:989 DEBUG 42124 --- [http-nio-8086-exec-9] c.h.trade.mapper.OrderMapper.selectById  : <==      Total: 1
+15:53:06:700  INFO 42124 --- [nacos-grpc-client-executor-211] com.alibaba.nacos.common.remote.client   : [654e05e2-600d-4b50-bf13-2896549a632e] Receive server push request, request = NotifySubscriberRequest, requestId = 99
+15:53:06:702  INFO 42124 --- [nacos-grpc-client-executor-211] com.alibaba.nacos.common.remote.client   : [654e05e2-600d-4b50-bf13-2896549a632e] Ack server push request, request = NotifySubscriberRequest, requestId = 99
+15:53:08:151  WARN 42124 --- [Thread-5] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+15:53:08:153  WARN 42124 --- [Thread-1] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+15:53:08:153  WARN 42124 --- [Thread-5] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+15:53:08:154  WARN 42124 --- [Thread-1] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+15:53:08:162  INFO 42124 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+15:53:08:888  INFO 42124 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+15:53:09:405  INFO 42124 --- [nacos-grpc-client-executor-212] com.alibaba.nacos.common.remote.client   : [654e05e2-600d-4b50-bf13-2896549a632e] Receive server push request, request = NotifySubscriberRequest, requestId = 102
+15:53:09:407  INFO 42124 --- [nacos-grpc-client-executor-212] com.alibaba.nacos.common.remote.client   : [654e05e2-600d-4b50-bf13-2896549a632e] Ack server push request, request = NotifySubscriberRequest, requestId = 102
+15:53:09:726  INFO 42124 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+15:53:09:731  INFO 42124 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+15:53:10:055  INFO 42124 --- [SpringApplicationShutdownHook] com.alibaba.nacos.common.remote.client   : Shutdown rpc client, set status to shutdown
+15:53:10:055  INFO 42124 --- [SpringApplicationShutdownHook] com.alibaba.nacos.common.remote.client   : Shutdown client event executor java.util.concurrent.ScheduledThreadPoolExecutor@5583649b[Running, pool size = 2, active threads = 2, queued tasks = 0, completed tasks = 0]
+15:53:10:055  INFO 42124 --- [SpringApplicationShutdownHook] com.alibaba.nacos.common.remote.client   : Close current connection 1755243457192_172.17.0.1_41250
+15:53:10:058  INFO 42124 --- [nacos-grpc-client-executor-215] c.a.n.c.remote.client.grpc.GrpcClient    : [1755243457192_172.17.0.1_41250]Ignore complete event,isRunning:false,isAbandon=false
+15:53:10:061  INFO 42124 --- [SpringApplicationShutdownHook] c.a.n.c.remote.client.grpc.GrpcClient    : Shutdown grpc executor java.util.concurrent.ThreadPoolExecutor@597c644c[Running, pool size = 6, active threads = 0, queued tasks = 0, completed tasks = 216]
+15:53:10:065  INFO 42124 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+15:53:20:073  INFO 42124 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+15:53:20:077  INFO 42124 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is already stopped
+15:53:36:450  INFO 55512 --- [main] com.alibaba.nacos.common.remote.client   : [RpcClientFactory] create a new rpc client of 9da31ef6-8fce-4dae-bd5b-3284f7bfd468_config-0
+15:53:36:520  INFO 55512 --- [main] org.reflections.Reflections              : Reflections took 34 ms to scan 1 urls, producing 3 keys and 6 values 
+15:53:36:555  INFO 55512 --- [main] org.reflections.Reflections              : Reflections took 9 ms to scan 1 urls, producing 4 keys and 9 values 
+15:53:36:564  INFO 55512 --- [main] org.reflections.Reflections              : Reflections took 5 ms to scan 1 urls, producing 3 keys and 10 values 
+15:53:36:569  WARN 55512 --- [main] org.reflections.Reflections              : given scan urls are empty. set urls in the configuration
+15:53:36:576  INFO 55512 --- [main] org.reflections.Reflections              : Reflections took 5 ms to scan 1 urls, producing 1 keys and 5 values 
+15:53:36:586  INFO 55512 --- [main] org.reflections.Reflections              : Reflections took 6 ms to scan 1 urls, producing 1 keys and 7 values 
+15:53:36:594  INFO 55512 --- [main] org.reflections.Reflections              : Reflections took 4 ms to scan 1 urls, producing 2 keys and 8 values 
+15:53:36:598  WARN 55512 --- [main] org.reflections.Reflections              : given scan urls are empty. set urls in the configuration
+15:53:36:599  INFO 55512 --- [main] com.alibaba.nacos.common.remote.client   : [9da31ef6-8fce-4dae-bd5b-3284f7bfd468_config-0] RpcClient init label, labels = {module=config, Vipserver-Tag=null, source=sdk, Amory-Tag=null, Location-Tag=null, taskId=0, AppName=unknown}
+15:53:36:600  INFO 55512 --- [main] com.alibaba.nacos.common.remote.client   : [9da31ef6-8fce-4dae-bd5b-3284f7bfd468_config-0] Register server push request handler:com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$$Lambda$463/0x00000008003f7040
+15:53:36:600  INFO 55512 --- [main] com.alibaba.nacos.common.remote.client   : [9da31ef6-8fce-4dae-bd5b-3284f7bfd468_config-0] Register server push request handler:com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$$Lambda$464/0x00000008003f7440
+15:53:36:601  INFO 55512 --- [main] com.alibaba.nacos.common.remote.client   : [9da31ef6-8fce-4dae-bd5b-3284f7bfd468_config-0] Registry connection listener to current client:com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$1
+15:53:36:601  INFO 55512 --- [main] com.alibaba.nacos.common.remote.client   : [9da31ef6-8fce-4dae-bd5b-3284f7bfd468_config-0] RpcClient init, ServerListFactory = com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$2
+15:53:36:613  INFO 55512 --- [main] com.alibaba.nacos.common.remote.client   : [9da31ef6-8fce-4dae-bd5b-3284f7bfd468_config-0] Try to connect to server on start up, server: {serverIp = '127.0.0.1', server main port = 8848}
+15:53:40:684  INFO 55512 --- [main] com.alibaba.nacos.common.remote.client   : [9da31ef6-8fce-4dae-bd5b-3284f7bfd468_config-0] Success to connect to server [127.0.0.1:8848] on start up, connectionId = 1755244420470_172.17.0.1_45624
+15:53:40:685  INFO 55512 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [9da31ef6-8fce-4dae-bd5b-3284f7bfd468_config-0] Notify connected event to listeners.
+15:53:40:685  INFO 55512 --- [main] com.alibaba.nacos.common.remote.client   : [9da31ef6-8fce-4dae-bd5b-3284f7bfd468_config-0] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
+15:53:40:687  INFO 55512 --- [main] com.alibaba.nacos.common.remote.client   : [9da31ef6-8fce-4dae-bd5b-3284f7bfd468_config-0] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$478/0x00000008004f8440
+15:53:40:746  WARN 55512 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[trade-service] & group[DEFAULT_GROUP]
+15:53:40:752  WARN 55512 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[trade-service.properties] & group[DEFAULT_GROUP]
+15:53:40:759  WARN 55512 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[trade-service-dev.properties] & group[DEFAULT_GROUP]
+15:53:40:760  INFO 55512 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-trade-service-dev.properties,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-trade-service.properties,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-trade-service,DEFAULT_GROUP'}]
+15:53:40:774  INFO 55512 --- [main] com.hmall.trade.TradeApplication         : The following 1 profile is active: "dev"
+15:53:41:434  INFO 55512 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+15:53:41:437  INFO 55512 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+15:53:41:461  INFO 55512 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 0 Redis repository interfaces.
+15:53:41:699  INFO 55512 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=e14d8af3-9367-308e-b89e-ea9e963dfa84
+15:53:42:018  INFO 55512 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8086 (http)
+15:53:42:029  INFO 55512 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+15:53:42:029  INFO 55512 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.75]
+15:53:42:190  INFO 55512 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+15:53:42:191  INFO 55512 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1403 ms
+15:53:42:326  INFO 55512 --- [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'item-service' URL not provided. Will try picking an instance via load-balancing.
+15:53:43:319  INFO 55512 --- [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'cart-service' URL not provided. Will try picking an instance via load-balancing.
+15:53:45:920  INFO 55512 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+15:53:45:943  INFO 55512 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+15:53:48:562  INFO 55512 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+15:53:48:727  INFO 55512 --- [main] com.alibaba.nacos.common.remote.client   : [RpcClientFactory] create a new rpc client of 00b51f71-3555-4825-861d-fe9bc50c4f1c
+15:53:48:728  INFO 55512 --- [main] com.alibaba.nacos.common.remote.client   : [00b51f71-3555-4825-861d-fe9bc50c4f1c] RpcClient init label, labels = {module=naming, source=sdk}
+15:53:48:729  INFO 55512 --- [main] com.alibaba.nacos.common.remote.client   : [00b51f71-3555-4825-861d-fe9bc50c4f1c] RpcClient init, ServerListFactory = com.alibaba.nacos.client.naming.core.ServerListManager
+15:53:48:730  INFO 55512 --- [main] com.alibaba.nacos.common.remote.client   : [00b51f71-3555-4825-861d-fe9bc50c4f1c] Registry connection listener to current client:com.alibaba.nacos.client.naming.remote.gprc.redo.NamingGrpcRedoService
+15:53:48:730  INFO 55512 --- [main] com.alibaba.nacos.common.remote.client   : [00b51f71-3555-4825-861d-fe9bc50c4f1c] Register server push request handler:com.alibaba.nacos.client.naming.remote.gprc.NamingPushRequestHandler
+15:53:48:730  INFO 55512 --- [main] com.alibaba.nacos.common.remote.client   : [00b51f71-3555-4825-861d-fe9bc50c4f1c] Try to connect to server on start up, server: {serverIp = 'localhost', server main port = 8848}
+15:53:48:857  INFO 55512 --- [main] com.alibaba.nacos.common.remote.client   : [00b51f71-3555-4825-861d-fe9bc50c4f1c] Success to connect to server [localhost:8848] on start up, connectionId = 1755244428738_172.17.0.1_36818
+15:53:48:857  INFO 55512 --- [main] com.alibaba.nacos.common.remote.client   : [00b51f71-3555-4825-861d-fe9bc50c4f1c] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
+15:53:48:857  INFO 55512 --- [main] com.alibaba.nacos.common.remote.client   : [00b51f71-3555-4825-861d-fe9bc50c4f1c] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$478/0x00000008004f8440
+15:53:48:857  INFO 55512 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [00b51f71-3555-4825-861d-fe9bc50c4f1c] Notify connected event to listeners.
+15:53:48:904  INFO 55512 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8086 (http) with context path ''
+15:53:48:914  INFO 55512 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP trade-service 192.168.138.1:8086 register finished
+15:53:49:381  INFO 55512 --- [nacos-grpc-client-executor-7] com.alibaba.nacos.common.remote.client   : [00b51f71-3555-4825-861d-fe9bc50c4f1c] Receive server push request, request = NotifySubscriberRequest, requestId = 115
+15:53:49:383  INFO 55512 --- [nacos-grpc-client-executor-7] com.alibaba.nacos.common.remote.client   : [00b51f71-3555-4825-861d-fe9bc50c4f1c] Ack server push request, request = NotifySubscriberRequest, requestId = 115
+15:53:51:037  INFO 55512 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+15:53:51:037  INFO 55512 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+15:53:51:039  INFO 55512 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+15:53:51:055  INFO 55512 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+15:53:51:104  INFO 55512 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+15:53:51:134  INFO 55512 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#736f2fb8:0/SimpleConnection@36c5a4b7 [delegate=amqp://itheima@127.0.0.1:5672//hmall, localPort= 62812]
+15:53:51:188  INFO 55512 --- [main] com.hmall.trade.TradeApplication         : Started TradeApplication in 20.873 seconds (JVM running for 22.942)
+15:53:51:192  INFO 55512 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=trade-service.properties, group=DEFAULT_GROUP
+15:53:51:192  INFO 55512 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=trade-service, group=DEFAULT_GROUP
+15:53:51:194  INFO 55512 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=trade-service-dev.properties, group=DEFAULT_GROUP
+15:55:17:045  WARN 55512 --- [Thread-1] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+15:55:17:045  WARN 55512 --- [Thread-5] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+15:55:17:045  WARN 55512 --- [Thread-5] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+15:55:17:046  WARN 55512 --- [Thread-1] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+15:55:17:054  INFO 55512 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+15:55:17:800  INFO 55512 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+15:55:18:584  INFO 55512 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+15:55:18:590  INFO 55512 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+15:55:18:912  INFO 55512 --- [SpringApplicationShutdownHook] com.alibaba.nacos.common.remote.client   : Shutdown rpc client, set status to shutdown
+15:55:18:912  INFO 55512 --- [SpringApplicationShutdownHook] com.alibaba.nacos.common.remote.client   : Shutdown client event executor java.util.concurrent.ScheduledThreadPoolExecutor@111cd246[Running, pool size = 2, active threads = 2, queued tasks = 0, completed tasks = 0]
+15:55:18:912  INFO 55512 --- [SpringApplicationShutdownHook] com.alibaba.nacos.common.remote.client   : Close current connection 1755244428738_172.17.0.1_36818
+15:55:18:916  INFO 55512 --- [nacos-grpc-client-executor-27] c.a.n.c.remote.client.grpc.GrpcClient    : [1755244428738_172.17.0.1_36818]Ignore complete event,isRunning:false,isAbandon=false
+15:55:18:918  INFO 55512 --- [SpringApplicationShutdownHook] c.a.n.c.remote.client.grpc.GrpcClient    : Shutdown grpc executor java.util.concurrent.ThreadPoolExecutor@39204a14[Running, pool size = 4, active threads = 0, queued tasks = 0, completed tasks = 28]
+15:55:18:921  INFO 55512 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is already stopped
+15:56:10:052  INFO 2232 --- [main] com.alibaba.nacos.common.remote.client   : [RpcClientFactory] create a new rpc client of 66bc873a-3e2b-448c-a181-8302d59c5e78_config-0
+15:56:10:088  INFO 2232 --- [main] org.reflections.Reflections              : Reflections took 18 ms to scan 1 urls, producing 3 keys and 6 values 
+15:56:10:112  INFO 2232 --- [main] org.reflections.Reflections              : Reflections took 8 ms to scan 1 urls, producing 4 keys and 9 values 
+15:56:10:119  INFO 2232 --- [main] org.reflections.Reflections              : Reflections took 5 ms to scan 1 urls, producing 3 keys and 10 values 
+15:56:10:124  WARN 2232 --- [main] org.reflections.Reflections              : given scan urls are empty. set urls in the configuration
+15:56:10:130  INFO 2232 --- [main] org.reflections.Reflections              : Reflections took 5 ms to scan 1 urls, producing 1 keys and 5 values 
+15:56:10:138  INFO 2232 --- [main] org.reflections.Reflections              : Reflections took 6 ms to scan 1 urls, producing 1 keys and 7 values 
+15:56:10:145  INFO 2232 --- [main] org.reflections.Reflections              : Reflections took 5 ms to scan 1 urls, producing 2 keys and 8 values 
+15:56:10:148  WARN 2232 --- [main] org.reflections.Reflections              : given scan urls are empty. set urls in the configuration
+15:56:10:149  INFO 2232 --- [main] com.alibaba.nacos.common.remote.client   : [66bc873a-3e2b-448c-a181-8302d59c5e78_config-0] RpcClient init label, labels = {module=config, Vipserver-Tag=null, source=sdk, Amory-Tag=null, Location-Tag=null, taskId=0, AppName=unknown}
+15:56:10:150  INFO 2232 --- [main] com.alibaba.nacos.common.remote.client   : [66bc873a-3e2b-448c-a181-8302d59c5e78_config-0] Register server push request handler:com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$$Lambda$463/0x00000008003f7040
+15:56:10:150  INFO 2232 --- [main] com.alibaba.nacos.common.remote.client   : [66bc873a-3e2b-448c-a181-8302d59c5e78_config-0] Register server push request handler:com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$$Lambda$464/0x00000008003f7440
+15:56:10:151  INFO 2232 --- [main] com.alibaba.nacos.common.remote.client   : [66bc873a-3e2b-448c-a181-8302d59c5e78_config-0] Registry connection listener to current client:com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$1
+15:56:10:152  INFO 2232 --- [main] com.alibaba.nacos.common.remote.client   : [66bc873a-3e2b-448c-a181-8302d59c5e78_config-0] RpcClient init, ServerListFactory = com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$2
+15:56:10:162  INFO 2232 --- [main] com.alibaba.nacos.common.remote.client   : [66bc873a-3e2b-448c-a181-8302d59c5e78_config-0] Try to connect to server on start up, server: {serverIp = '127.0.0.1', server main port = 8848}
+15:56:13:516  INFO 2232 --- [main] com.alibaba.nacos.common.remote.client   : [66bc873a-3e2b-448c-a181-8302d59c5e78_config-0] Success to connect to server [127.0.0.1:8848] on start up, connectionId = 1755244573328_172.17.0.1_60316
+15:56:13:517  INFO 2232 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [66bc873a-3e2b-448c-a181-8302d59c5e78_config-0] Notify connected event to listeners.
+15:56:13:518  INFO 2232 --- [main] com.alibaba.nacos.common.remote.client   : [66bc873a-3e2b-448c-a181-8302d59c5e78_config-0] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
+15:56:13:519  INFO 2232 --- [main] com.alibaba.nacos.common.remote.client   : [66bc873a-3e2b-448c-a181-8302d59c5e78_config-0] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$478/0x00000008004f8440
+15:56:13:568  WARN 2232 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[trade-service] & group[DEFAULT_GROUP]
+15:56:13:574  WARN 2232 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[trade-service.properties] & group[DEFAULT_GROUP]
+15:56:13:580  WARN 2232 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[trade-service-dev.properties] & group[DEFAULT_GROUP]
+15:56:13:581  INFO 2232 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-trade-service-dev.properties,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-trade-service.properties,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-trade-service,DEFAULT_GROUP'}]
+15:56:13:592  INFO 2232 --- [main] com.hmall.trade.TradeApplication         : The following 1 profile is active: "dev"
+15:56:14:210  INFO 2232 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+15:56:14:212  INFO 2232 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+15:56:14:231  INFO 2232 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 0 Redis repository interfaces.
+15:56:14:396  INFO 2232 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=e14d8af3-9367-308e-b89e-ea9e963dfa84
+15:56:14:689  INFO 2232 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8086 (http)
+15:56:14:697  INFO 2232 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+15:56:14:697  INFO 2232 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.75]
+15:56:14:835  INFO 2232 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+15:56:14:835  INFO 2232 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1232 ms
+15:56:14:996  INFO 2232 --- [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'item-service' URL not provided. Will try picking an instance via load-balancing.
+15:56:15:967  INFO 2232 --- [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'cart-service' URL not provided. Will try picking an instance via load-balancing.
+15:56:18:414  INFO 2232 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+15:56:18:435  INFO 2232 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+15:56:21:017  INFO 2232 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+15:56:21:174  INFO 2232 --- [main] com.alibaba.nacos.common.remote.client   : [RpcClientFactory] create a new rpc client of a98fe93f-4c0b-4708-9674-f1325d28ce41
+15:56:21:174  INFO 2232 --- [main] com.alibaba.nacos.common.remote.client   : [a98fe93f-4c0b-4708-9674-f1325d28ce41] RpcClient init label, labels = {module=naming, source=sdk}
+15:56:21:176  INFO 2232 --- [main] com.alibaba.nacos.common.remote.client   : [a98fe93f-4c0b-4708-9674-f1325d28ce41] RpcClient init, ServerListFactory = com.alibaba.nacos.client.naming.core.ServerListManager
+15:56:21:176  INFO 2232 --- [main] com.alibaba.nacos.common.remote.client   : [a98fe93f-4c0b-4708-9674-f1325d28ce41] Registry connection listener to current client:com.alibaba.nacos.client.naming.remote.gprc.redo.NamingGrpcRedoService
+15:56:21:177  INFO 2232 --- [main] com.alibaba.nacos.common.remote.client   : [a98fe93f-4c0b-4708-9674-f1325d28ce41] Register server push request handler:com.alibaba.nacos.client.naming.remote.gprc.NamingPushRequestHandler
+15:56:21:177  INFO 2232 --- [main] com.alibaba.nacos.common.remote.client   : [a98fe93f-4c0b-4708-9674-f1325d28ce41] Try to connect to server on start up, server: {serverIp = 'localhost', server main port = 8848}
+15:56:21:295  INFO 2232 --- [main] com.alibaba.nacos.common.remote.client   : [a98fe93f-4c0b-4708-9674-f1325d28ce41] Success to connect to server [localhost:8848] on start up, connectionId = 1755244581185_172.17.0.1_44854
+15:56:21:295  INFO 2232 --- [main] com.alibaba.nacos.common.remote.client   : [a98fe93f-4c0b-4708-9674-f1325d28ce41] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
+15:56:21:295  INFO 2232 --- [main] com.alibaba.nacos.common.remote.client   : [a98fe93f-4c0b-4708-9674-f1325d28ce41] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$478/0x00000008004f8440
+15:56:21:295  INFO 2232 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [a98fe93f-4c0b-4708-9674-f1325d28ce41] Notify connected event to listeners.
+15:56:21:333  INFO 2232 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8086 (http) with context path ''
+15:56:21:344  INFO 2232 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP trade-service 192.168.138.1:8086 register finished
+15:56:21:846  INFO 2232 --- [nacos-grpc-client-executor-6] com.alibaba.nacos.common.remote.client   : [a98fe93f-4c0b-4708-9674-f1325d28ce41] Receive server push request, request = NotifySubscriberRequest, requestId = 126
+15:56:21:849  INFO 2232 --- [nacos-grpc-client-executor-6] com.alibaba.nacos.common.remote.client   : [a98fe93f-4c0b-4708-9674-f1325d28ce41] Ack server push request, request = NotifySubscriberRequest, requestId = 126
+15:56:23:496  INFO 2232 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+15:56:23:496  INFO 2232 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+15:56:23:499  INFO 2232 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+15:56:23:514  INFO 2232 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+15:56:23:562  INFO 2232 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+15:56:23:597  INFO 2232 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#180e33b0:0/SimpleConnection@6f5f892c [delegate=amqp://itheima@127.0.0.1:5672//hmall, localPort= 63227]
+15:56:23:653  INFO 2232 --- [main] com.hmall.trade.TradeApplication         : Started TradeApplication in 19.022 seconds (JVM running for 20.96)
+15:56:23:658  INFO 2232 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=trade-service.properties, group=DEFAULT_GROUP
+15:56:23:658  INFO 2232 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=trade-service, group=DEFAULT_GROUP
+15:56:23:658  INFO 2232 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=trade-service-dev.properties, group=DEFAULT_GROUP
+16:01:34:200  INFO 2232 --- [http-nio-8086-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+16:01:34:201  INFO 2232 --- [http-nio-8086-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+16:01:34:204  INFO 2232 --- [http-nio-8086-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+16:01:34:300  INFO 2232 --- [http-nio-8086-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+16:01:35:165  INFO 2232 --- [http-nio-8086-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+16:01:35:502 DEBUG 2232 --- [http-nio-8086-exec-1] c.hmall.trade.mapper.OrderMapper.insert  : ==>  Preparing: INSERT INTO `order` ( id, total_fee, payment_type, user_id, status ) VALUES ( ?, ?, ?, ?, ? )
+16:01:35:523 DEBUG 2232 --- [http-nio-8086-exec-1] c.hmall.trade.mapper.OrderMapper.insert  : ==> Parameters: 1956264996594601986(Long), 379500(Integer), 3(Integer), 2(Long), 1(Integer)
+16:01:35:605 DEBUG 2232 --- [http-nio-8086-exec-1] c.hmall.trade.mapper.OrderMapper.insert  : <==    Updates: 1
+16:01:35:616 DEBUG 2232 --- [http-nio-8086-exec-1] c.h.t.mapper.OrderDetailMapper.insert    : ==>  Preparing: INSERT INTO order_detail ( order_id, item_id, num, name, spec, price, image ) VALUES ( ?, ?, ?, ?, ?, ?, ? )
+16:01:35:616 DEBUG 2232 --- [http-nio-8086-exec-1] c.h.t.mapper.OrderDetailMapper.insert    : ==> Parameters: 1956264996594601986(Long), 8533120(Long), 1(Integer), 海尔 （Haier ）LQ65H31 65英寸 4K曲面人工智能全面屏超高清LED液晶电视(String), {}(String), 379500(Integer), https://m.360buyimg.com/mobilecms/s720x720_jfs/t1/2851/14/13998/101463/5bd9723cE81b2c299/1bfdf2d1628648e4.jpg!q70.jpg.webp(String)
+16:01:35:898  INFO 2232 --- [nacos-grpc-client-executor-75] com.alibaba.nacos.common.remote.client   : [a98fe93f-4c0b-4708-9674-f1325d28ce41] Receive server push request, request = NotifySubscriberRequest, requestId = 132
+16:01:35:899  INFO 2232 --- [nacos-grpc-client-executor-75] com.alibaba.nacos.common.remote.client   : [a98fe93f-4c0b-4708-9674-f1325d28ce41] Ack server push request, request = NotifySubscriberRequest, requestId = 132
+16:01:36:131 DEBUG 2232 --- [http-nio-8086-exec-5] c.h.trade.mapper.OrderMapper.selectById  : ==>  Preparing: SELECT id,total_fee,payment_type,user_id,status,create_time,pay_time,consign_time,end_time,close_time,comment_time,update_time FROM `order` WHERE id=?
+16:01:36:132 DEBUG 2232 --- [http-nio-8086-exec-5] c.h.trade.mapper.OrderMapper.selectById  : ==> Parameters: 1956264996594601986(Long)
+16:01:36:176 DEBUG 2232 --- [http-nio-8086-exec-5] c.h.trade.mapper.OrderMapper.selectById  : <==      Total: 1
+16:01:36:297  INFO 2232 --- [nacos-grpc-client-executor-76] com.alibaba.nacos.common.remote.client   : [a98fe93f-4c0b-4708-9674-f1325d28ce41] Receive server push request, request = NotifySubscriberRequest, requestId = 133
+16:01:36:297  INFO 2232 --- [nacos-grpc-client-executor-76] com.alibaba.nacos.common.remote.client   : [a98fe93f-4c0b-4708-9674-f1325d28ce41] Ack server push request, request = NotifySubscriberRequest, requestId = 133
+16:01:57:667 DEBUG 2232 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.h.trade.mapper.OrderMapper.selectById  : ==>  Preparing: SELECT id,total_fee,payment_type,user_id,status,create_time,pay_time,consign_time,end_time,close_time,comment_time,update_time FROM `order` WHERE id=?
+16:01:57:668 DEBUG 2232 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.h.trade.mapper.OrderMapper.selectById  : ==> Parameters: 1956264996594601986(Long)
+16:01:57:699 DEBUG 2232 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.h.trade.mapper.OrderMapper.selectById  : <==      Total: 1
+16:01:57:709 DEBUG 2232 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.h.trade.mapper.OrderMapper.updateById  : ==>  Preparing: UPDATE `order` SET status=?, pay_time=? WHERE id=?
+16:01:57:713 DEBUG 2232 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.h.trade.mapper.OrderMapper.updateById  : ==> Parameters: 2(Integer), 2025-08-15T16:01:57.699901800(LocalDateTime), 1956264996594601986(Long)
+16:01:57:784 DEBUG 2232 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.h.trade.mapper.OrderMapper.updateById  : <==    Updates: 1
+16:01:57:805 DEBUG 2232 --- [http-nio-8086-exec-3] c.h.trade.mapper.OrderMapper.selectById  : ==>  Preparing: SELECT id,total_fee,payment_type,user_id,status,create_time,pay_time,consign_time,end_time,close_time,comment_time,update_time FROM `order` WHERE id=?
+16:01:57:805 DEBUG 2232 --- [http-nio-8086-exec-3] c.h.trade.mapper.OrderMapper.selectById  : ==> Parameters: 1956264996594601986(Long)
+16:01:57:841 DEBUG 2232 --- [http-nio-8086-exec-3] c.h.trade.mapper.OrderMapper.selectById  : <==      Total: 1
