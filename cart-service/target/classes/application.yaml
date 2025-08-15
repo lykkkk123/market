@@ -9,3 +9,10 @@ hm:
     package: com.hmall.cart.controller
   db:
     database: hm-cart
+spring:
+  rabbitmq:
+    host: localhost # 你的虚拟机IP
+    port: 5672 # 端口
+    virtual-host: /hmall # 虚拟主机
+    username: itheima # 用户名
+    password: 123321 # 密码

@@ -21,7 +21,6 @@ public class PayStatusListener {
             key = "pay.success"
     ))
     public void listenPaySuccess(Long orderId) {
-        System.err.println(orderId+"!!!!!!!!!!!!!");
         // 1.查询订单
         Order order = orderService.getById(orderId);
         // 2.判断订单状态

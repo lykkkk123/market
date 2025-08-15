@@ -9,11 +9,12 @@ import com.hmall.trade.domain.po.OrderDetail;
 import com.hmall.trade.mapper.OrderMapper;
 import com.hmall.trade.service.IOrderDetailService;
 import com.hmall.trade.service.IOrderService;
-import com.hmapi.client.CartClient;
 import com.hmapi.client.ItemClient;
 import com.hmapi.dto.ItemDTO;
 import com.hmapi.dto.OrderDetailDTO;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -32,13 +33,14 @@ import java.util.stream.Collectors;
  * @author 虎哥
  * @since 2023-05-05
  */
+@Slf4j
 @Service
 @RequiredArgsConstructor
 public class OrderServiceImpl extends ServiceImpl<OrderMapper, Order> implements IOrderService {
 
     private final ItemClient itemClient;
     private final IOrderDetailService detailService;
-    private final CartClient cartClient;
+    private final RabbitTemplate rabbitTemplate;
 
     @Override
     @Transactional
@@ -74,7 +76,15 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, Order> implements
         detailService.saveBatch(details);
 
         // 3.清理购物车商品
-        cartClient.deleteCartItemByIds(itemIds);
+//        cartClient.deleteCartItemByIds(itemIds);
+        try {
+            rabbitTemplate.convertAndSend("trade.topic","order.create", itemIds, message -> {
+                message.getMessageProperties().setHeader("user-id", UserContext.getUser());
+                return message;
+            });
+        } catch (Exception e) {
+            log.info("清除购物车失败，id：{}", UserContext.getUser());
+        }
 
         // 4.扣减库存
         try {
